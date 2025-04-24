@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Creating multilingual pipelines&lt;br /&gt;with RDF-Connect</title>
+  <link rel="stylesheet" media="screen" href="styles/screen.css" />
+  <link rel="stylesheet" media="print"  href="styles/print.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+</head>
+<body prefix="cc: https://creativecommons.org/ns# rdfs: http://www.w3.org/2000/01/rdf-schema#">
+  <header>
+  <h1 id="creating-multilingual-pipelinesbr-with-rdf-connect">Creating multilingual pipelines<br />with RDF-Connect</h1>
+
+  <ul id="authors">
+    <li><a rev="lsc:participatesIn" property="foaf:maker schema:creator schema:author schema:publisher" href="#" typeof="foaf:Person schema:Person" resource="#">Arthur Vercruysse</a></li>
+    <li><a rev="lsc:participatesIn" property="foaf:maker schema:creator schema:author schema:publisher" href="#" typeof="foaf:Person schema:Person" resource="#">Ieben Smessaert</a></li>
+    <li><a rev="lsc:participatesIn" property="foaf:maker schema:creator schema:author schema:publisher" href="#" typeof="foaf:Person schema:Person" resource="https://data.verborgh.org/people/julian_rojas_melendez">Julián Andrés Rojas Meléndez</a></li>
+  </ul>
+
+  <ul id="affiliations">
+    <li id="idlab">IDLab,
+          Department of Electronics and Information Systems,
+          Ghent University – imec</li>
+  </ul>
+
+  <center class="screen-only">
+    <a href="https://github.com/rdf-connect/"><img src="img/rdf-connect.svg" height="300px" /></a>
+</center>
+
+  <section class="context">
+    <p>Tutorial at <a href="https://iswc2025.semanticweb.org/#/calls/workshopstutorials" rel="as:inReplyTo">ISWC 2025</a>, November TBD 2025</p>
+  </section>
+
+  <p><br /></p>
+
+  <section id="abstract" inlist="" rel="schema:hasPart" resource="#abstract">
+<div datatype="rdf:HTML" property="schema:description">
+      <h2 property="schema:name">Abstract</h2>
+      <!-- Context      -->
+      <p><a href="https://github.com/rdf-connect/">RDF Connect</a> is a linked data lasagna built to create multilingual streaming pipelines.</p>
+
+      <!-- Need         -->
+      <p>In order to enable developers and researchers
+to start building such decentralized applications,
+<!-- Task         -->
+we offer a tutorial on RDF Connect.</p>
+
+      <p><br class="screen-only" /></p>
+
+      <!-- Object       -->
+      <p>This tutorial consists of an overview of RDF Connect, including creating a pipeline <em>and</em> creating new processors.
+<!-- Findings     -->
+<!-- Conclusion   -->
+As a result, participants from different backgrounds
+will have experience 
+<!-- Perspectives --></p>
+
+    </div>
+</section>
+
+</header>
+
+<section class="contents screen-only">
+  <h2 id="contents">Contents</h2>
+  <ul>
+    <li><a href="#motivation">Motivation</a></li>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#material">Material</a></li>
+    <li><a href="#audience">Audience</a></li>
+    <li><a href="#presenters">Presenters</a></li>
+    <li><a href="#related-events">Related Events</a></li>
+    <li><a href="#requirements">Requirements</a></li>
+  </ul>
+</section>
+
+<center class="screen-only" style="font-size: 1.4em; font-style: italic">
+If you intend to participate in the hands-on part of this tutorial, make sure to install <a href="#material">the required software</a>.
+</center>
+
+<main>
+  <section id="motivation" inlist="" rel="schema:hasPart" resource="#motivation">
+<div datatype="rdf:HTML" property="schema:description">
+      <h2 property="schema:name">Motivation</h2>
+
+      <p>The best in class libraries that handle RDF data are scattered over different programming languages.
+Building data transformations using these libraries is a tricky business, RDF Connect enables users to build pipelines including custom processor tailed to their need.</p>
+
+      <p>The goal of this tutorial is to provide participants
+with knowledge on how to build RDF Connect pipelines and processors.</p>
+
+    </div>
+</section>
+
+  <section id="description" inlist="" rel="schema:hasPart" resource="#description">
+<div datatype="rdf:HTML" property="schema:description">
+      <h2 property="schema:name">Description</h2>
+
+      <p>We plan a full day for this tutorial as shown in <a href="#planning">Table 1</a>.
+The morning session will focus on the basics of Solid and Comunica,
+and the afternoon will consist of hands-on sessions for building applications.
+We expect participants to have basic knowledge of Web technologies such as HTML, JavaScript, RDF and SPARQL.</p>
+
+      <figure id="planning" class="table">
+
+        <table>
+          <thead>
+            <tr>
+              <th> </th>
+              <th>Topic</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Morning 1: Introduction</strong> (<em>1:20</em>)</td>
+              <td>Introduction</td>
+              <td>0:10</td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td>Introduction to RDF Connect Processors</td>
+              <td>0:40</td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td>Introduction to RDF Connect Pipelines</td>
+              <td>0:30</td>
+            </tr>
+            <tr>
+              <td><em>Break</em></td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><strong>Morning 2: Processors</strong> (<em>1:20</em>)</td>
+              <td>RDF Connect Processors</td>
+              <td>0:40</td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td>TBD</td>
+              <td>0:40</td>
+            </tr>
+            <tr>
+              <td><em>Lunch Break</em></td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><strong>Afternoon 1: Apps</strong> (<em>1:20</em>)</td>
+              <td>RDF Connect Pipelines</td>
+              <td>0:40</td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td>TBD</td>
+              <td>0:40</td>
+            </tr>
+            <tr>
+              <td><em>Break</em></td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><strong>Afternoon 1: Hackathon</strong> (<em>1:20</em>)</td>
+              <td>Hackathon</td>
+              <td>1:20</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <figcaption>
+          <p><span class="label">Table 1:</span> Planning of the tutorial</p>
+        </figcaption>
+      </figure>
+
+      <p>Text explaining the itinerary.</p>
+
+    </div>
+</section>
+
+  <section id="material" inlist="" rel="schema:hasPart" resource="#material">
+<div datatype="rdf:HTML" property="schema:description">
+      <h2 property="schema:name">Material</h2>
+
+      <p>The tutorial is guided by slides,
+which are shared online.
+For the hands-on coding sessions, we provide
+a git repository with separate branches for all sequentially completed tasks.
+This will allow participants that are unable to complete a certain task,
+to still begin with the next task by checking out a different branch.</p>
+
+      <p>The slides and git repository are open for everyone under the CC BY 4.0 license.</p>
+
+      <h3 id="requirements">Requirements</h3>
+
+      <ul>
+        <li><a href="https://git-scm.com/">git</a> (<em>you probably already have this</em>)</li>
+        <li><a href="https://nodejs.org/en/">Node.js</a> (&gt;= 10.0)</li>
+        <li>A JavaScript editor. (we will use <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>, but feel free to use anything you want)</li>
+      </ul>
+
+    </div>
+</section>
+
+  <section id="audience" inlist="" rel="schema:hasPart" resource="#audience">
+<div datatype="rdf:HTML" property="schema:description">
+      <h2 property="schema:name">Audience</h2>
+
+      <p>This tutorial focuses on Web developers and researchers
+that want to use, develop, or research data transformation pipelines.</p>
+
+    </div>
+</section>
+
+  <section id="presenters" inlist="" rel="schema:hasPart" resource="#presenters">
+<div datatype="rdf:HTML" property="schema:description">
+      <h2 property="schema:name">Presenters</h2>
+
+      <p>This tutorial will be presented by Arthur Vercruysse{:.mandatory} (primary contact: <a href="mailto:arthur.vercruysse@ugent.be">arthur.vercruysse@ugent.be</a>) and Ieben Smessaert from Ghent University – imec.</p>
+
+    </div>
+</section>
+
+  <section id="related-events" inlist="" rel="schema:hasPart" resource="#related-events">
+<div datatype="rdf:HTML" property="schema:description">
+      <h2 property="schema:name">Related Events</h2>
+
+      <p>Something about related events.</p>
+
+    </div>
+</section>
+
+  <section id="requirements" inlist="" rel="schema:hasPart" resource="#requirements">
+<div datatype="rdf:HTML" property="schema:description">
+      <h2 property="schema:name">Requirements</h2>
+
+      <p>For this tutorial, we require a projector to present our slides,
+and a power plug for charging our laptop.</p>
+
+    </div>
+</section>
+
+</main>
+
+<footer></footer>
+
+</body about="" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# dcterms: http://purl.org/dc/terms/ dctypes: http://purl.org/dc/dcmitype/ foaf: http://xmlns.com/foaf/0.1/ v: http://www.w3.org/2006/vcard/ns# pimspace: http://www.w3.org/ns/pim/space# cc: https://creativecommons.org/ns# skos: http://www.w3.org/2004/02/skos/core# prov: http://www.w3.org/ns/prov# qb: http://purl.org/linked-data/cube# schema: http://schema.org/ void: http://rdfs.org/ns/void# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# cal: http://www.w3.org/2002/12/cal/ical# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# org: http://www.w3.org/ns/org# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ sioc: http://rdfs.org/sioc/ns# doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ oa: http://www.w3.org/ns/oa# as: https://www.w3.org/ns/activitystreams# ldp: http://www.w3.org/ns/ldp# solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio#" typeof="schema:CreativeWork sioc:Post prov:Entity">
+</html>
