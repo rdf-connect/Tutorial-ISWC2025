@@ -12,7 +12,7 @@ gem 'rubypants'
 gem 'sass'
 
 # references
-gem 'i18n'
+gem 'i18n', '< 1.1'
 gem 'latex-decode'
 gem 'unicode_utils'
 gem 'citeproc-ruby', '>= 1.1.6'
@@ -21,10 +21,10 @@ gem 'csl-styles'
 group :development do
   # live view
   gem 'guard-nanoc', '~> 2.1.2'
-  gem 'guard-process'
+  gem 'guard-rack'
   gem 'guard-livereload'
-  gem 'serve'
-  gem 'thin'
+  gem 'rack', '~> 3.0.9.1'
+  gem 'rackup'
   gem 'rack-livereload'
   gem 'wdm', '>= 0.1.0' if Gem.win_platform?
   gem 'rb-readline'

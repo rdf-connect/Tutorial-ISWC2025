@@ -1,4 +1,4 @@
-FROM ruby:2.4
+FROM ruby:3.3
 
 # Install dependencies (adjust as needed)
 # RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
