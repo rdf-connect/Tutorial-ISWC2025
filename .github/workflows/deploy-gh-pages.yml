@@ -19,10 +19,19 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
-      - name: Install and Build 🔧
+      - name: Install and Build Webpage 🔧
         run: |
           bundle exec nanoc compile
           bundle exec nanoc check internal_links mixed_content stale
+
+      - name: Install and Build Slides 🔧
+        run: |
+          cd slides
+          npm install
+          npm run bundle
+          mkdir -p ../output/slides
+          cp -r bundled/* ../output/slides/
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
