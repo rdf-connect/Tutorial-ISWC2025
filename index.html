@@ -2,20 +2,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Creating multilingual pipelines&lt;br /&gt;with RDF-Connect</title>
+  <title property="foaf:name schema:name">Building Streaming and Cross-Environment Data Processing Pipelines with RDF-Connect</title>
   <link rel="stylesheet" media="screen" href="styles/screen.css" />
   <link rel="stylesheet" media="print"  href="styles/print.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
+  <meta name="citation_title" content="Building Streaming and Cross-Environment Data Processing Pipelines with RDF-Connect">
+  <meta name="citation_author" content="Ieben Smessaert" />
+  <meta name="citation_author" content="Arthur Vercruysse" />
+  <meta name="citation_author" content="Julián Rojas Meléndez" />
+  <meta name="citation_author" content="Pieter Colpaert" />
+  
+  <meta name="citation_publication_date" content="2025/04/25" />
 </head>
-<body prefix="cc: https://creativecommons.org/ns# rdfs: http://www.w3.org/2000/01/rdf-schema#">
+
+<body prefix="dctypes: http://purl.org/dc/dcmitype/ pimspace: http://www.w3.org/ns/pim/space# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# lsc: http://linkedscience.org/lsc/ns#" typeof="schema:CreativeWork sioc:Post prov:Entity lsc:Research">
   <header>
-  <h1 id="creating-multilingual-pipelinesbr-with-rdf-connect">Creating multilingual pipelines<br />with RDF-Connect</h1>
+  <h1 id="building-streaming-and-cross-environment-data-processing-pipelines-with-rdf-connect">Building Streaming and Cross-Environment Data Processing Pipelines with RDF-Connect</h1>
 
   <ul id="authors">
-    <li><a rev="lsc:participatesIn" property="foaf:maker schema:creator schema:author schema:publisher" href="#" typeof="foaf:Person schema:Person" resource="#">Arthur Vercruysse</a></li>
-    <li><a rev="lsc:participatesIn" property="foaf:maker schema:creator schema:author schema:publisher" href="#" typeof="foaf:Person schema:Person" resource="#">Ieben Smessaert</a></li>
-    <li><a rev="lsc:participatesIn" property="foaf:maker schema:creator schema:author schema:publisher" href="#" typeof="foaf:Person schema:Person" resource="https://data.verborgh.org/people/julian_rojas_melendez">Julián Andrés Rojas Meléndez</a></li>
+    <li><a rev="lsc:participatesIn" property="foaf:maker schema:creator schema:author schema:publisher" href="https://smessaert.be" typeof="foaf:Person schema:Person" resource="https://solid.smessie.com/profile/card#me">Ieben Smessaert</a></li>
+    <li><a rev="lsc:participatesIn" property="foaf:maker schema:creator schema:author schema:publisher" href="#" typeof="foaf:Person schema:Person" resource="https://data.knows.idlab.ugent.be/person/ajuvercr/#me">Arthur Vercruysse</a></li>
+    <li><a rev="lsc:participatesIn" property="foaf:maker schema:creator schema:author schema:publisher" href="https://julianrojas.org/" typeof="foaf:Person schema:Person" resource="https://julianrojas.org/#me">Julián Rojas Meléndez</a></li>
+    <li><a rev="lsc:participatesIn" property="foaf:maker schema:creator schema:author schema:publisher" href="https://pietercolpaert.be/" typeof="foaf:Person schema:Person" resource="https://pietercolpaert.be/#me">Pieter Colpaert</a></li>
   </ul>
 
   <ul id="affiliations">
@@ -61,24 +70,8 @@ will have experience
 
 </header>
 
-<section class="contents screen-only">
-  <h2 id="contents">Contents</h2>
-  <ul>
-    <li><a href="#motivation">Motivation</a></li>
-    <li><a href="#description">Description</a></li>
-    <li><a href="#material">Material</a></li>
-    <li><a href="#audience">Audience</a></li>
-    <li><a href="#presenters">Presenters</a></li>
-    <li><a href="#related-events">Related Events</a></li>
-    <li><a href="#requirements">Requirements</a></li>
-  </ul>
-</section>
-
-<center class="screen-only" style="font-size: 1.4em; font-style: italic">
-If you intend to participate in the hands-on part of this tutorial, make sure to install <a href="#material">the required software</a>.
-</center>
-
 <main>
+  <!-- Add sections by specifying their file name, excluding the '.md' suffix. -->
   <section id="motivation" inlist="" rel="schema:hasPart" resource="#motivation">
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Motivation</h2>
@@ -246,5 +239,5 @@ and a power plug for charging our laptop.</p>
 
 <footer></footer>
 
-</body about="" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# dcterms: http://purl.org/dc/terms/ dctypes: http://purl.org/dc/dcmitype/ foaf: http://xmlns.com/foaf/0.1/ v: http://www.w3.org/2006/vcard/ns# pimspace: http://www.w3.org/ns/pim/space# cc: https://creativecommons.org/ns# skos: http://www.w3.org/2004/02/skos/core# prov: http://www.w3.org/ns/prov# qb: http://purl.org/linked-data/cube# schema: http://schema.org/ void: http://rdfs.org/ns/void# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# cal: http://www.w3.org/2002/12/cal/ical# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# org: http://www.w3.org/ns/org# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ sioc: http://rdfs.org/sioc/ns# doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ oa: http://www.w3.org/ns/oa# as: https://www.w3.org/ns/activitystreams# ldp: http://www.w3.org/ns/ldp# solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio#" typeof="schema:CreativeWork sioc:Post prov:Entity">
+</body>
 </html>
