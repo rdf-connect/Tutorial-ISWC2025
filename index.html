@@ -13,7 +13,7 @@
   <meta name="citation_author" content="Julián Rojas Meléndez" />
   <meta name="citation_author" content="Pieter Colpaert" />
   
-  <meta name="citation_publication_date" content="2025/04/25" />
+  <meta name="citation_publication_date" content="2025/05/06" />
 </head>
 
 <body prefix="dctypes: http://purl.org/dc/dcmitype/ pimspace: http://www.w3.org/ns/pim/space# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# lsc: http://linkedscience.org/lsc/ns#" typeof="schema:CreativeWork sioc:Post prov:Entity lsc:Research">
@@ -46,24 +46,19 @@
   <section id="abstract" inlist="" rel="schema:hasPart" resource="#abstract">
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Abstract</h2>
-      <!-- Context      -->
-      <p><a href="https://github.com/rdf-connect/">RDF Connect</a> is a linked data lasagna built to create multilingual streaming pipelines.</p>
-
-      <!-- Need         -->
-      <p>In order to enable developers and researchers
-to start building such decentralized applications,
-<!-- Task         -->
-we offer a tutorial on RDF Connect.</p>
-
-      <p><br class="screen-only" /></p>
-
-      <!-- Object       -->
-      <p>This tutorial consists of an overview of RDF Connect, including creating a pipeline <em>and</em> creating new processors.
-<!-- Findings     -->
-<!-- Conclusion   -->
-As a result, participants from different backgrounds
-will have experience 
-<!-- Perspectives --></p>
+      <!-- Context -->
+      <p><a href="https://github.com/rdf-connect/">RDF Connect</a> emerges as a groundbreaking solution to the fragmented landscape of data processing pipelines, offering a language-agnostic framework for building sophisticated, provenance-aware streaming data transformations.
+<!-- Need -->
+In an era of increasingly complex data ecosystems and the growing importance of Large Language Models (LLMs), developers and researchers require flexible, interoperable tools for creating multilingual data processing pipelines.
+<!-- Task -->
+To address this critical need, we present a comprehensive, hands-on tutorial designed to empower participants with the skills to leverage RDF Connect’s innovative capabilities.
+<br class="screen-only" />
+<!-- Object -->
+The tutorial provides an immersive, full-day learning experience that combines theoretical insights with practical implementation. Participants will: (i) Construct a machine learning pipeline using processors in multiple programming languages, (ii) Create custom data processors for diverse endpoints, (iii) Explore provenance tracking using RDF and PROV-O ontology.
+<!-- Conclusion -->
+By the end of the tutorial, participants from varied backgrounds—including Python, JavaScript, and Java developers—will gain practical experience in building language-agnostic, semantically rich data processing pipelines.
+<!-- Perspectives -->
+This tutorial not only introduces RDF Connect but also opens new avenues for interdisciplinary data transformation strategies in semantic web research and development.</p>
 
     </div>
 </section>
@@ -72,27 +67,64 @@ will have experience
 
 <main>
   <!-- Add sections by specifying their file name, excluding the '.md' suffix. -->
-  <section id="motivation" inlist="" rel="schema:hasPart" resource="#motivation">
-<div datatype="rdf:HTML" property="schema:description">
-      <h2 property="schema:name">Motivation</h2>
-
-      <p>The best in class libraries that handle RDF data are scattered over different programming languages.
-Building data transformations using these libraries is a tricky business, RDF Connect enables users to build pipelines including custom processor tailed to their need.</p>
-
-      <p>The goal of this tutorial is to provide participants
-with knowledge on how to build RDF Connect pipelines and processors.</p>
-
-    </div>
-</section>
-
   <section id="description" inlist="" rel="schema:hasPart" resource="#description">
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Description</h2>
 
-      <p>We plan a full day for this tutorial as shown in <a href="#planning">Table 1</a>.
-The morning session will focus on the basics of Solid and Comunica,
-and the afternoon will consist of hands-on sessions for building applications.
-We expect participants to have basic knowledge of Web technologies such as HTML, JavaScript, RDF and SPARQL.</p>
+      <p>This tutorial introduces RDF Connect (RDFC), a novel, language-agnostic framework for constructing streaming data processing pipelines. By leveraging the Resource Description Framework (RDF) and the PROV-O ontology, RDFC enables the creation of pipelines that seamlessly integrate processors implemented in multiple programming languages.</p>
+
+      <p>Key Tutorial Highlights:</p>
+
+      <ul>
+        <li><strong>Language Agnostic</strong>: Create processors in any programming language</li>
+        <li><strong>Provenance-Driven</strong>: Describe pipelines using RDF and PROV-O ontology</li>
+        <li><strong>Hands-On Learning</strong>: Build custom processors and complete pipelines</li>
+      </ul>
+
+      <p>Tutorial Practical Project:
+Participants will construct a machine learning pipeline that:</p>
+
+      <ul>
+        <li>Extracts weather data using JavaScript</li>
+        <li>Ingests data into a Python-based ML model</li>
+      </ul>
+
+      <p>By the end of the tutorial, you’ll understand how to:</p>
+
+      <ul>
+        <li>Design language-independent data processing pipelines</li>
+        <li>Create custom processors for diverse data sources</li>
+        <li>Leverage RDF for comprehensive pipeline documentation</li>
+      </ul>
+
+      <h2 id="motivation">Motivation</h2>
+
+      <p>In today’s fragmented data ecosystem, RDF libraries are spread across multiple programming languages, making data transformations complex and challenging. RDF Connect solves this by:</p>
+
+      <ul>
+        <li>Unifying data processing across language boundaries</li>
+        <li>Enabling custom processors tailored to specific needs</li>
+        <li>Providing comprehensive provenance tracking using PROV-O ontology</li>
+      </ul>
+
+      <p>With the rise of Large Language Models (LLMs), provenance has never been more critical. RDF Connect allows you to:
+- Publish pipeline configurations alongside generated datasets
+- Trace data lineage and origin
+- Streamline machine learning training by intelligently pruning data sources</p>
+
+      <h2 id="description">Format and Schedule</h2>
+
+      <p>We plan a full day for this tutorial as shown in <a href="#planning">Table 1</a>.</p>
+
+      <p>The tutorial is structured into four distinct sessions.</p>
+
+      <p>The first session provides an introduction to RDF Connect, highlighting its language-agnostic processor architecture. This session includes an overview of the tutorial’s content, as well as a detailed description of the pipeline participants will build throughout the day.</p>
+
+      <p>The second session delves into the process of building a custom processor. Participants will learn how to create a processor configuration and implement a client for the weather endpoint.</p>
+
+      <p>The third session focuses on building a pipeline using the processor created in the previous session. Participants will build a machine learning pipeline that consumes the weather information in their favorite model.</p>
+
+      <p>The fourth session is a hackathon, where all participants work together to either extend the pipeline created in the previous session with new data sources, or build a new pipeline using existing processors to achieve a different goal.</p>
 
       <figure id="planning" class="table">
 
@@ -168,8 +200,6 @@ We expect participants to have basic knowledge of Web technologies such as HTML,
         </figcaption>
       </figure>
 
-      <p>Text explaining the itinerary.</p>
-
     </div>
 </section>
 
@@ -177,22 +207,12 @@ We expect participants to have basic knowledge of Web technologies such as HTML,
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Material</h2>
 
-      <p>The tutorial is guided by slides,
-which are shared online.
-For the hands-on coding sessions, we provide
-a git repository with separate branches for all sequentially completed tasks.
+      <p>The tutorial is guided by slides, which are shared online.
+For the hands-on coding sessions, we provide a git repository with separate branches for all sequentially completed tasks.
 This will allow participants that are unable to complete a certain task,
 to still begin with the next task by checking out a different branch.</p>
 
       <p>The slides and git repository are open for everyone under the CC BY 4.0 license.</p>
-
-      <h3 id="requirements">Requirements</h3>
-
-      <ul>
-        <li><a href="https://git-scm.com/">git</a> (<em>you probably already have this</em>)</li>
-        <li><a href="https://nodejs.org/en/">Node.js</a> (&gt;= 10.0)</li>
-        <li>A JavaScript editor. (we will use <a href="https://www.jetbrains.com/webstorm/">WebStorm</a>, but feel free to use anything you want)</li>
-      </ul>
 
     </div>
 </section>
@@ -201,8 +221,12 @@ to still begin with the next task by checking out a different branch.</p>
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Audience</h2>
 
-      <p>This tutorial focuses on Web developers and researchers
-that want to use, develop, or research data transformation pipelines.</p>
+      <p>This tutorial targets intermediate and advanced developers and researchers
+who aim to understand, develop, or investigate data processing pipelines
+using Semantic Web technologies. 
+The tutorial is designed to accommodate
+approximately 20 participants, who should possess a basic understanding
+of Turtle, SHACL, and at least one of Python, JavaScript, or Java.</p>
 
     </div>
 </section>
@@ -213,14 +237,7 @@ that want to use, develop, or research data transformation pipelines.</p>
 
       <p>This tutorial will be presented by Arthur Vercruysse{:.mandatory} (primary contact: <a href="mailto:arthur.vercruysse@ugent.be">arthur.vercruysse@ugent.be</a>) and Ieben Smessaert from Ghent University – imec.</p>
 
-    </div>
-</section>
-
-  <section id="related-events" inlist="" rel="schema:hasPart" resource="#related-events">
-<div datatype="rdf:HTML" property="schema:description">
-      <h2 property="schema:name">Related Events</h2>
-
-      <p>Something about related events.</p>
+      <p>Arthur Vercruysse is a PhD student, who started his research journey with Knowledge Graph construction, and pivoted to developer tooling with his love for compilers.</p>
 
     </div>
 </section>
@@ -231,6 +248,8 @@ that want to use, develop, or research data transformation pipelines.</p>
 
       <p>For this tutorial, we require a projector to present our slides,
 and a power plug for charging our laptop.</p>
+
+      <p>The presents and the partitioners need an internet connection.</p>
 
     </div>
 </section>
