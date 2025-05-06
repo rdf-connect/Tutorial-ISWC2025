@@ -1,19 +1,22 @@
 ## Description
 {:#description}
 
-RDF Connect (RDFC) is a revolutionary streaming data pipeline framework that breaks language barriers. Our tutorial introduces participants to a unique approach where processors can be implemented in multiple programming languages, seamlessly working together within a single pipeline.
+This tutorial introduces RDF Connect (RDFC), a novel, language-agnostic framework for constructing streaming data processing pipelines. By leveraging the Resource Description Framework (RDF) and the PROV-O ontology, RDFC enables the creation of pipelines that seamlessly integrate processors implemented in multiple programming languages.
 
 Key Tutorial Highlights:
+
 - **Language Agnostic**: Create processors in any programming language
 - **Provenance-Driven**: Describe pipelines using RDF and PROV-O ontology
 - **Hands-On Learning**: Build custom processors and complete pipelines
 
 Tutorial Practical Project:
 Participants will construct a machine learning pipeline that:
+
 - Extracts weather data using JavaScript
 - Ingests data into a Python-based ML model
 
 By the end of the tutorial, you'll understand how to:
+
 - Design language-independent data processing pipelines
 - Create custom processors for diverse data sources
 - Leverage RDF for comprehensive pipeline documentation
@@ -39,15 +42,15 @@ With the rise of Large Language Models (LLMs), provenance has never been more cr
 
 We plan a full day for this tutorial as shown in [](#planning).
 
-The first session starts an introduction to RDF Connect, including the novel aspects of language agnostics processors. 
-This section also includes an overview of the remained of the day, with a detailed description of the eventual pipeline that is built, including the new processor.
+The tutorial is structured into four distinct sessions.
 
-The seconds session includes the actual building of the processor. 
-This allows participants to create the processor configuration and implementing a client for the weather endpoint.
+The first session provides an introduction to RDF Connect, highlighting its language-agnostic processor architecture. This session includes an overview of the tutorial's content, as well as a detailed description of the pipeline participants will build throughout the day.
 
-The third session, allows participants to create a pipeline with their shiny processor and build a ML pipeline consuming this weather information in their favorite model.
+The second session delves into the process of building a custom processor. Participants will learn how to create a processor configuration and implement a client for the weather endpoint.
 
-We also have a fourth session.
+The third session focuses on building a pipeline using the processor created in the previous session. Participants will build a machine learning pipeline that consumes the weather information in their favorite model.
+
+The fourth session is a hackathon, where all participants work together to either extend the pipeline created in the previous session with new data sources, or build a new pipeline using existing processors to achieve a different goal.
 
 
 <figure id="planning" markdown="1" class="table">
