@@ -13,7 +13,7 @@
   <meta name="citation_author" content="Julián Rojas Meléndez" />
   <meta name="citation_author" content="Pieter Colpaert" />
   
-  <meta name="citation_publication_date" content="2025/05/06" />
+  <meta name="citation_publication_date" content="2025/05/08" />
 </head>
 
 <body prefix="dctypes: http://purl.org/dc/dcmitype/ pimspace: http://www.w3.org/ns/pim/space# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# lsc: http://linkedscience.org/lsc/ns#" typeof="schema:CreativeWork sioc:Post prov:Entity lsc:Research">
@@ -47,23 +47,47 @@
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Abstract</h2>
       <!-- Context -->
-      <p><a href="https://github.com/rdf-connect/">RDF Connect</a> emerges as a groundbreaking solution to the fragmented landscape of data processing pipelines, offering a language-agnostic framework for building sophisticated, provenance-aware streaming data transformations.
+      <p><a href="https://github.com/rdf-connect/">RDF Connect</a> is a novel, language-agnostic framework for building provenance-aware,
+streaming data pipelines that integrate heterogeneous processors across programming languages. It addresses a
+longstanding gap in the Semantic Web ecosystem: the lack of modular, interoperable tools for creating complex,
+semantically rich data workflows.
 <!-- Need -->
-In an era of increasingly complex data ecosystems and the growing importance of Large Language Models (LLMs), developers and researchers require flexible, interoperable tools for creating multilingual data processing pipelines.
+In an era of increasingly complex data ecosystems and the growing importance of Large Language Models (LLMs), developers
+and researchers require flexible, interoperable tools for creating multilingual data processing pipelines.
 <!-- Task -->
-To address this critical need, we present a comprehensive, hands-on tutorial designed to empower participants with the skills to leverage RDF Connect’s innovative capabilities.
+To meet this need, we present a comprehensive, full-day tutorial that blends conceptual foundations with hands-on
+experience. Through a series of guided tasks, participants will learn to use RDF Connect to design and execute
+streaming pipelines that are standards-compliant, extensible, and transparent.
 <br class="screen-only" />
 <!-- Object -->
-The tutorial provides an immersive, full-day learning experience that combines theoretical insights with practical implementation. Participants will: (i) Construct a machine learning pipeline using processors in multiple programming languages, (ii) Create custom data processors for diverse endpoints, (iii) Explore provenance tracking using RDF and PROV-O ontology.
+Participants will construct a streaming data processing pipeline based on a real-world use case: generating a knowledge
+graph from the Japan Meteorological Agency’s weather forecasts for Nara, Japan. They will: (i) Construct a machine
+learning pipeline using processors in multiple programming languages, (ii) Create custom data processors for diverse
+endpoints, (iii) Explore provenance tracking using RDF and PROV-O ontology.
 <!-- Conclusion -->
-By the end of the tutorial, participants from varied backgrounds—including Python, JavaScript, and Java developers—will gain practical experience in building language-agnostic, semantically rich data processing pipelines.
+By the end of the tutorial, participants from varied backgrounds—including Python, JavaScript, and Java developers—will
+gain practical experience in building language-agnostic, semantically rich data processing pipelines.
 <!-- Perspectives -->
-This tutorial not only introduces RDF Connect but also opens new avenues for interdisciplinary data transformation strategies in semantic web research and development.</p>
+This tutorial not only introduces RDF Connect but also opens new avenues for interdisciplinary data transformation
+strategies in Semantic Web research and development.</p>
 
     </div>
 </section>
 
 </header>
+
+<section class="contents screen-only">
+  <h2 id="contents">Contents</h2>
+  <ul>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#motivation">Motivation</a></li>
+    <li><a href="#format">Format and Schedule</a></li>
+    <li><a href="#material">Material</a></li>
+    <li><a href="#audience">Audience</a></li>
+    <li><a href="#presenters">Presenters</a></li>
+    <li><a href="#requirements">Requirements</a></li>
+  </ul>
+</section>
 
 <main>
   <!-- Add sections by specifying their file name, excluding the '.md' suffix. -->
@@ -71,60 +95,101 @@ This tutorial not only introduces RDF Connect but also opens new avenues for int
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Description</h2>
 
-      <p>This tutorial introduces RDF Connect (RDFC), a novel, language-agnostic framework for constructing streaming data processing pipelines. By leveraging the Resource Description Framework (RDF) and the PROV-O ontology, RDFC enables the creation of pipelines that seamlessly integrate processors implemented in multiple programming languages.</p>
+      <p id="description">This tutorial introduces <em>RDF Connect (RDFC)</em>, a novel, language-agnostic framework for constructing streaming data
+processing pipelines. 
+By leveraging the Resource Description Framework (RDF) and the PROV-O ontology, <em>RDFC</em> enables the
+creation of pipelines that seamlessly integrate processors implemented in multiple programming languages.
+The tutorial is centered around the core concepts of pipeline construction and processor development, giving
+participants the skills and understanding needed to build their own RDF-based streaming workflows.</p>
+
+      <p>Participants will gain hands-on experience with <em>RDFC</em>, learning how to build pipelines by chaining together modular
+components – called processors – that each perform a specific operation on RDF data.
+A major focus of the tutorial is on how to implement custom processors and integrate them into a functioning pipeline.
+Rather than emphasizing the solution to a specific data processing problem, the tutorial demonstrates how to structure
+and manage RDF workflows that are adaptable across domains and use cases.</p>
+
+      <p>To make the learning experience tangible, the tutorial includes a practical project based on a sample use case:
+ingesting weather data from the Japan Meteorological Agency and transforming it into a multilingual RDF knowledge graph.
+This example illustrates how different processors can be combined – such as an extractor written in JavaScript
+(TODO: or Java?), a translation component using a Python-based ML model, a SHACL validation step using the
+shacl-validator in JavaScript, and a triple store publisher.
+While the example incorporates components such as translation or SHACL validation, these are used only to demonstrate
+<em>RDF Connect</em>’s capabilities and flexibility – not to teach those techniques themselves.</p>
 
       <p>Key Tutorial Highlights:</p>
 
       <ul>
         <li><strong>Language Agnostic</strong>: Create processors in any programming language</li>
-        <li><strong>Provenance-Driven</strong>: Describe pipelines using RDF and PROV-O ontology</li>
-        <li><strong>Hands-On Learning</strong>: Build custom processors and complete pipelines</li>
+        <li><strong>Provenance-Driven</strong>: Describe pipelines using RDF and the PROV-O ontology</li>
+        <li><strong>Hands-On Learning</strong>: Build custom processors and complete pipelines using <em>RDF Connect</em></li>
       </ul>
 
-      <p>Tutorial Practical Project:
-Participants will construct a machine learning pipeline that:</p>
+      <p>By the end of the tutorial, participants will be able to:</p>
 
       <ul>
-        <li>Extracts weather data using JavaScript</li>
-        <li>Ingests data into a Python-based ML model</li>
+        <li>Design language-independent, modular data processing pipelines</li>
+        <li>Create custom processors for diverse data sources within <em>RDF Connect</em></li>
+        <li>Leverage RDF and PROV-O to document and trace pipeline structure and execution</li>
       </ul>
 
-      <p>By the end of the tutorial, you’ll understand how to:</p>
-
-      <ul>
-        <li>Design language-independent data processing pipelines</li>
-        <li>Create custom processors for diverse data sources</li>
-        <li>Leverage RDF for comprehensive pipeline documentation</li>
-      </ul>
+      <p>This tutorial is designed to empower researchers, developers, and practitioners with the skills to build scalable,
+maintainable, and explainable streaming pipelines in RDF-based environments.</p>
 
       <h2 id="motivation">Motivation</h2>
 
-      <p>In today’s fragmented data ecosystem, RDF libraries are spread across multiple programming languages, making data transformations complex and challenging. RDF Connect solves this by:</p>
+      <p id="motivation">As the Semantic Web community continues to embrace increasingly diverse data sources and application domains, there is a
+growing need for flexible, interoperable tooling that can bridge gaps between technologies, languages, and paradigms.
+<em>RDF Connect (RDFC)</em> directly addresses this need by providing a language-agnostic framework for building streaming data
+pipelines that are modular, traceable, and standards-compliant.</p>
 
-      <ul>
-        <li>Unifying data processing across language boundaries</li>
-        <li>Enabling custom processors tailored to specific needs</li>
-        <li>Providing comprehensive provenance tracking using PROV-O ontology</li>
-      </ul>
+      <p>Many Semantic Web workflows involve custom tooling built in specific languages, often leading to brittle, monolithic
+systems that are difficult to maintain, extend, or reuse.
+<em>RDFC</em> turns these challenges into opportunities by decoupling processing logic from implementation language and
+describing pipeline configurations using RDF and the PROV-O ontology.
+This approach makes pipeline components easier to combine, reason about, and share across teams and communities.</p>
 
-      <p>With the rise of Large Language Models (LLMs), provenance has never been more critical. RDF Connect allows you to:
-- Publish pipeline configurations alongside generated datasets
-- Trace data lineage and origin
-- Streamline machine learning training by intelligently pruning data sources</p>
+      <p>Moreover, the importance of provenance is growing rapidly, especially in the age of AI-generated content and automated
+decision-making.
+<em>RDFC</em> makes it easy to publish machine-readable documentation of the steps and transformations applied to data,
+facilitating transparency, reproducibility, and trust.
+It also complements FAIR data practices and aligns well with the principles of Open Science.</p>
 
-      <h2 id="description">Format and Schedule</h2>
+      <p>This tutorial fills a critical gap in current Semantic Web tooling by introducing a practical, extensible way to build
+streaming data pipelines that are explainable and modular.
+It is particularly valuable for early-career researchers, practitioners building real-world applications, and anyone
+seeking to build more interoperable and maintainable Semantic Web systems.</p>
 
-      <p>We plan a full day for this tutorial as shown in <a href="#planning">Table 1</a>.</p>
+      <h2 id="format">Format and Schedule</h2>
 
-      <p>The tutorial is structured into four distinct sessions.</p>
+      <p>This tutorial is designed to be a <strong>full-day session</strong> as outlined in <a href="#planning">Table 1</a>, as it introduces a new framework
+and guides participants through both conceptual foundations and hands-on implementation work.
+A half-day format would not suffice to cover both the design principles of <em>RDFC</em> and provide meaningful experience
+building pipelines and processors.</p>
 
-      <p>The first session provides an introduction to RDF Connect, highlighting its language-agnostic processor architecture. This session includes an overview of the tutorial’s content, as well as a detailed description of the pipeline participants will build throughout the day.</p>
+      <p>The program is structured into four sessions, two in the morning and two in the afternoon, progressively building from a
+conceptual overview to hands-on development.
+The day concludes with a collaborative hackathon where participants apply what they’ve learned to explore extensions or 
+develop new applications.</p>
 
-      <p>The second session delves into the process of building a custom processor. Participants will learn how to create a processor configuration and implement a client for the weather endpoint.</p>
+      <p>The <strong>first session</strong> introduces RDF Connect at a high level, highlighting its language-agnostic processor architecture.
+This session includes an overview of the tutorial’s content, as well as a detailed description of the pipeline
+participants will build throughout the day.</p>
 
-      <p>The third session focuses on building a pipeline using the processor created in the previous session. Participants will build a machine learning pipeline that consumes the weather information in their favorite model.</p>
+      <p>The <strong>second session</strong> focuses on processor development. Participants will learn how to implement a processor in a
+language of their choice, and configure it for pipeline integration.
+They will implement a processor that transforms a set of triples.
+This processor will have to identify triples with a literal as the object and a language tag <code>@ja</code>.
+It will then translate these triples to English and add them as a new triple with the language tag <code>@en</code>.
+We can implement this using a lightweight ML model that translates input from Japanese to English locally.
+Alternatively, we could implement a processor that sends the input to a remote translation service.</p>
 
-      <p>The fourth session is a hackathon, where all participants work together to either extend the pipeline created in the previous session with new data sources, or build a new pipeline using existing processors to achieve a different goal.</p>
+      <p>The <strong>third session</strong> covers pipeline assembly using both existing and the custom-built processor from the previous
+session.
+Participants will construct a working streaming pipeline that pulls data, applies transformations, performs validation,
+and publishes results to a triple store.</p>
+
+      <p>The <strong>fourth session</strong> is a hackathon, where all participants work together to either extend the pipeline created in the
+previous session with new data sources, or build a new pipeline using existing processors to achieve a different goal.</p>
 
       <figure id="planning" class="table">
 
@@ -159,13 +224,13 @@ Participants will construct a machine learning pipeline that:</p>
             </tr>
             <tr>
               <td><strong>Morning 2: Processors</strong> (<em>1:20</em>)</td>
-              <td>RDF Connect Processors</td>
-              <td>0:40</td>
+              <td>Recap: How to implement a RDFC Processor?</td>
+              <td>0:10</td>
             </tr>
             <tr>
               <td> </td>
-              <td>TBD</td>
-              <td>0:40</td>
+              <td>Hands-on: Implementing a processor</td>
+              <td>1:10</td>
             </tr>
             <tr>
               <td><em>Lunch Break</em></td>
@@ -174,13 +239,13 @@ Participants will construct a machine learning pipeline that:</p>
             </tr>
             <tr>
               <td><strong>Afternoon 1: Apps</strong> (<em>1:20</em>)</td>
-              <td>RDF Connect Pipelines</td>
-              <td>0:40</td>
+              <td>Recap: How to build and execute a RDFC Pipeline?</td>
+              <td>0:10</td>
             </tr>
             <tr>
               <td> </td>
-              <td>TBD</td>
-              <td>0:40</td>
+              <td>Hands-on: Assembling a pipeline</td>
+              <td>1:10</td>
             </tr>
             <tr>
               <td><em>Break</em></td>
@@ -249,7 +314,7 @@ of Turtle, SHACL, and at least one of Python, JavaScript, or Java.</p>
       <p>For this tutorial, we require a projector to present our slides,
 and a power plug for charging our laptop.</p>
 
-      <p>The presents and the partitioners need an internet connection.</p>
+      <p>The presenters and the participants need an internet connection.</p>
 
     </div>
 </section>
