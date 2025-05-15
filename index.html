@@ -13,7 +13,7 @@
   <meta name="citation_author" content="Julián Rojas Meléndez" />
   <meta name="citation_author" content="Pieter Colpaert" />
   
-  <meta name="citation_publication_date" content="2025/05/08" />
+  <meta name="citation_publication_date" content="2025/05/15" />
 </head>
 
 <body prefix="dctypes: http://purl.org/dc/dcmitype/ pimspace: http://www.w3.org/ns/pim/space# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# lsc: http://linkedscience.org/lsc/ns#" typeof="schema:CreativeWork sioc:Post prov:Entity lsc:Research">
@@ -47,7 +47,7 @@
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Abstract</h2>
       <!-- Context -->
-      <p><a href="https://github.com/rdf-connect/">RDF Connect</a> is a novel, language-agnostic framework for building provenance-aware,
+      <p><a href="https://github.com/rdf-connect/">RDF-Connect</a> is a novel, language-agnostic framework for building provenance-aware,
 streaming data pipelines that integrate heterogeneous processors across programming languages. It addresses a
 longstanding gap in the Semantic Web ecosystem: the lack of modular, interoperable tools for creating complex,
 semantically rich data workflows.
@@ -56,7 +56,7 @@ In an era of increasingly complex data ecosystems and the growing importance of 
 and researchers require flexible, interoperable tools for creating multilingual data processing pipelines.
 <!-- Task -->
 To meet this need, we present a comprehensive, full-day tutorial that blends conceptual foundations with hands-on
-experience. Through a series of guided tasks, participants will learn to use RDF Connect to design and execute
+experience. Through a series of guided tasks, participants will learn to use RDF-Connect to design and execute
 streaming pipelines that are standards-compliant, extensible, and transparent.
 <br class="screen-only" />
 <!-- Object -->
@@ -68,7 +68,7 @@ endpoints, (iii) Explore provenance tracking using RDF and PROV-O ontology.
 By the end of the tutorial, participants from varied backgrounds—including Python, JavaScript, and Java developers—will
 gain practical experience in building language-agnostic, semantically rich data processing pipelines.
 <!-- Perspectives -->
-This tutorial not only introduces RDF Connect but also opens new avenues for interdisciplinary data transformation
+This tutorial not only introduces RDF-Connect but also opens new avenues for interdisciplinary data transformation
 strategies in Semantic Web research and development.</p>
 
     </div>
@@ -95,8 +95,8 @@ strategies in Semantic Web research and development.</p>
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Description</h2>
 
-      <p id="description">This tutorial introduces <em>RDF Connect (RDFC)</em>, a novel, language-agnostic framework for constructing streaming data
-processing pipelines. 
+      <p id="description">This tutorial introduces <em>RDF-Connect (RDFC)</em>, a novel, language-agnostic framework for constructing streaming data
+processing pipelines.
 By leveraging the Resource Description Framework (RDF) and the PROV-O ontology, <em>RDFC</em> enables the
 creation of pipelines that seamlessly integrate processors implemented in multiple programming languages.
 The tutorial is centered around the core concepts of pipeline construction and processor development, giving
@@ -114,21 +114,35 @@ This example illustrates how different processors can be combined – such as an
 (TODO: or Java?), a translation component using a Python-based ML model, a SHACL validation step using the
 shacl-validator in JavaScript, and a triple store publisher.
 While the example incorporates components such as translation or SHACL validation, these are used only to demonstrate
-<em>RDF Connect</em>’s capabilities and flexibility – not to teach those techniques themselves.</p>
+<em>RDF-Connect</em>’s capabilities and flexibility – not to teach those techniques themselves.</p>
+
+      <p>Based on that, the expected outcome will be a functional pipeline created by the participants that integrates both
+existing and custom components within the RDF-Connect framework.
+The pipeline will begin by extracting weather forecast data from the Japan Meteorological Agency using RML-based
+processors.
+This data will then be validated against a predefined schema using the SHACL validator, which wraps a high-performance
+JavaScript SHACL engine.
+Once validated, the data will be passed to a custom processor, implemented by the participant, that performs
+language-aware transformations.
+Specifically, this processor will identify all triples with literal objects tagged as Japanese (<code>@ja</code>), translate the
+content into English using a lightweight machine learning model, and generate new triples with the translated literals
+tagged as English (<code>@en</code>).
+The resulting RDF data will then be transformed into SDS records, the internal RDF data format used by RDF-Connect, and
+published to a triple store using the built-in SPARQLIngest processor.</p>
 
       <p>Key Tutorial Highlights:</p>
 
       <ul>
         <li><strong>Language Agnostic</strong>: Create processors in any programming language</li>
         <li><strong>Provenance-Driven</strong>: Describe pipelines using RDF and the PROV-O ontology</li>
-        <li><strong>Hands-On Learning</strong>: Build custom processors and complete pipelines using <em>RDF Connect</em></li>
+        <li><strong>Hands-On Learning</strong>: Build custom processors and complete pipelines using <em>RDF-Connect</em></li>
       </ul>
 
       <p>By the end of the tutorial, participants will be able to:</p>
 
       <ul>
         <li>Design language-independent, modular data processing pipelines</li>
-        <li>Create custom processors for diverse data sources within <em>RDF Connect</em></li>
+        <li>Create custom processors for diverse data sources within <em>RDF-Connect</em></li>
         <li>Leverage RDF and PROV-O to document and trace pipeline structure and execution</li>
       </ul>
 
@@ -139,7 +153,7 @@ maintainable, and explainable streaming pipelines in RDF-based environments.</p>
 
       <p id="motivation">As the Semantic Web community continues to embrace increasingly diverse data sources and application domains, there is a
 growing need for flexible, interoperable tooling that can bridge gaps between technologies, languages, and paradigms.
-<em>RDF Connect (RDFC)</em> directly addresses this need by providing a language-agnostic framework for building streaming data
+<em>RDF-Connect (RDFC)</em> directly addresses this need by providing a language-agnostic framework for building streaming data
 pipelines that are modular, traceable, and standards-compliant.</p>
 
       <p>Many Semantic Web workflows involve custom tooling built in specific languages, often leading to brittle, monolithic
@@ -159,19 +173,19 @@ streaming data pipelines that are explainable and modular.
 It is particularly valuable for early-career researchers, practitioners building real-world applications, and anyone
 seeking to build more interoperable and maintainable Semantic Web systems.</p>
 
-      <h2 id="format">Format and Schedule</h2>
+      <h2 id="format-and-schedule">Format and Schedule</h2>
 
-      <p>This tutorial is designed to be a <strong>full-day session</strong> as outlined in <a href="#planning">Table 1</a>, as it introduces a new framework
+      <p id="format">This tutorial is designed to be a <strong>full-day session</strong> as outlined in <a href="#planning">Table 1</a>, as it introduces a new framework
 and guides participants through both conceptual foundations and hands-on implementation work.
 A half-day format would not suffice to cover both the design principles of <em>RDFC</em> and provide meaningful experience
 building pipelines and processors.</p>
 
       <p>The program is structured into four sessions, two in the morning and two in the afternoon, progressively building from a
 conceptual overview to hands-on development.
-The day concludes with a collaborative hackathon where participants apply what they’ve learned to explore extensions or 
+The day concludes with a collaborative hackathon where participants apply what they’ve learned to explore extensions or
 develop new applications.</p>
 
-      <p>The <strong>first session</strong> introduces RDF Connect at a high level, highlighting its language-agnostic processor architecture.
+      <p>The <strong>first session</strong> introduces RDF-Connect at a high level, highlighting its language-agnostic processor architecture.
 This session includes an overview of the tutorial’s content, as well as a detailed description of the pipeline
 participants will build throughout the day.</p>
 
@@ -209,12 +223,12 @@ previous session with new data sources, or build a new pipeline using existing p
             </tr>
             <tr>
               <td> </td>
-              <td>Introduction to RDF Connect Processors</td>
+              <td>Introduction to RDF-Connect Processors</td>
               <td>0:40</td>
             </tr>
             <tr>
               <td> </td>
-              <td>Introduction to RDF Connect Pipelines</td>
+              <td>Introduction to RDF-Connect Pipelines</td>
               <td>0:30</td>
             </tr>
             <tr>
@@ -300,9 +314,20 @@ of Turtle, SHACL, and at least one of Python, JavaScript, or Java.</p>
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Presenters</h2>
 
-      <p>This tutorial will be presented by Arthur Vercruysse{:.mandatory} (primary contact: <a href="mailto:arthur.vercruysse@ugent.be">arthur.vercruysse@ugent.be</a>) and Ieben Smessaert from Ghent University – imec.</p>
+      <p>This tutorial will be presented by Arthur Vercruysse{:.mandatory} (primary
+contact: <a href="mailto:arthur.vercruysse@ugent.be">arthur.vercruysse@ugent.be</a>) and Ieben Smessaert from Ghent University –
+imec.</p>
 
-      <p>Arthur Vercruysse is a PhD student, who started his research journey with Knowledge Graph construction, and pivoted to developer tooling with his love for compilers.</p>
+      <p>Arthur Vercruysse is a PhD student, who started his research journey with Knowledge Graph construction, and pivoted to
+developer tooling with his love for compilers.</p>
+
+      <p>Ieben Smessaert is a second year PhD student and one of the main developers and maintainers of the RDF-Connect
+ecosystem.
+He actively applies RDF-Connect in real-world use cases that include lifecycle management of DCAT-AP feeds within the
+SEMIC community, and publication of geospatial knowledge graphs for the Flemish Institute for the sea.
+Ieben also has experience by assisting practical sessions of
+the <a href="http://rubenverborgh.github.io/WebFundamentals/">Web Development course</a>
+by <a href="https://ruben.verborgh.org/">Ruben Verborgh</a> at Ghent University.</p>
 
     </div>
 </section>
