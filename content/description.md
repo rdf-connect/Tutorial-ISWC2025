@@ -3,7 +3,7 @@
 {:#description}
 
 This tutorial introduces _RDF Connect (RDFC)_, a novel, language-agnostic framework for constructing streaming data
-processing pipelines. 
+processing pipelines.
 By leveraging the Resource Description Framework (RDF) and the PROV-O ontology, _RDFC_ enables the
 creation of pipelines that seamlessly integrate processors implemented in multiple programming languages.
 The tutorial is centered around the core concepts of pipeline construction and processor development, giving
@@ -22,6 +22,20 @@ This example illustrates how different processors can be combined -- such as an 
 shacl-validator in JavaScript, and a triple store publisher.
 While the example incorporates components such as translation or SHACL validation, these are used only to demonstrate
 _RDF Connect_’s capabilities and flexibility -- not to teach those techniques themselves.
+
+Based on that, the expected outcome will be a functional pipeline created by the participants that integrates both
+existing and custom components within the RDF-Connect framework.
+The pipeline will begin by extracting weather forecast data from the Japan Meteorological Agency using RML-based
+processors.
+This data will then be validated against a predefined schema using the SHACL validator, which wraps a high-performance
+JavaScript SHACL engine.
+Once validated, the data will be passed to a custom processor, implemented by the participant, that performs
+language-aware transformations.
+Specifically, this processor will identify all triples with literal objects tagged as Japanese (`@ja`), translate the
+content into English using a lightweight machine learning model, and generate new triples with the translated literals
+tagged as English (`@en`).
+The resulting RDF data will then be transformed into SDS records, the internal RDF data format used by RDF-Connect, and
+published to a triple store using the built-in SPARQLIngest processor.
 
 Key Tutorial Highlights:
 
@@ -65,6 +79,7 @@ It is particularly valuable for early-career researchers, practitioners building
 seeking to build more interoperable and maintainable Semantic Web systems.
 
 ## Format and Schedule
+
 {:#format}
 
 This tutorial is designed to be a **full-day session** as outlined in [](#planning), as it introduces a new framework
@@ -74,7 +89,7 @@ building pipelines and processors.
 
 The program is structured into four sessions, two in the morning and two in the afternoon, progressively building from a
 conceptual overview to hands-on development.
-The day concludes with a collaborative hackathon where participants apply what they’ve learned to explore extensions or 
+The day concludes with a collaborative hackathon where participants apply what they’ve learned to explore extensions or
 develop new applications.
 
 The **first session** introduces RDF Connect at a high level, highlighting its language-agnostic processor architecture.
