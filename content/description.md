@@ -2,8 +2,8 @@
 
 {:#description}
 
-This tutorial introduces _RDF Connect (RDFC)_, a novel, language-agnostic framework for constructing streaming data
-processing pipelines. 
+This tutorial introduces _RDF-Connect (RDFC)_, a novel, language-agnostic framework for constructing streaming data
+processing pipelines.
 By leveraging the Resource Description Framework (RDF) and the PROV-O ontology, _RDFC_ enables the
 creation of pipelines that seamlessly integrate processors implemented in multiple programming languages.
 The tutorial is centered around the core concepts of pipeline construction and processor development, giving
@@ -21,18 +21,32 @@ This example illustrates how different processors can be combined -- such as an 
 (TODO: or Java?), a translation component using a Python-based ML model, a SHACL validation step using the
 shacl-validator in JavaScript, and a triple store publisher.
 While the example incorporates components such as translation or SHACL validation, these are used only to demonstrate
-_RDF Connect_’s capabilities and flexibility -- not to teach those techniques themselves.
+_RDF-Connect_’s capabilities and flexibility -- not to teach those techniques themselves.
+
+Based on that, the expected outcome will be a functional pipeline created by the participants that integrates both
+existing and custom components within the RDF-Connect framework.
+The pipeline will begin by extracting weather forecast data from the Japan Meteorological Agency using RML-based
+processors.
+This data will then be validated against a predefined schema using the SHACL validator, which wraps a high-performance
+JavaScript SHACL engine.
+Once validated, the data will be passed to a custom processor, implemented by the participant, that performs
+language-aware transformations.
+Specifically, this processor will identify all triples with literal objects tagged as Japanese (`@ja`), translate the
+content into English using a lightweight machine learning model, and generate new triples with the translated literals
+tagged as English (`@en`).
+The resulting RDF data will then be transformed into SDS records, the internal RDF data format used by RDF-Connect, and
+published to a triple store using the built-in SPARQLIngest processor.
 
 Key Tutorial Highlights:
 
 - **Language Agnostic**: Create processors in any programming language
 - **Provenance-Driven**: Describe pipelines using RDF and the PROV-O ontology
-- **Hands-On Learning**: Build custom processors and complete pipelines using _RDF Connect_
+- **Hands-On Learning**: Build custom processors and complete pipelines using _RDF-Connect_
 
 By the end of the tutorial, participants will be able to:
 
 - Design language-independent, modular data processing pipelines
-- Create custom processors for diverse data sources within _RDF Connect_
+- Create custom processors for diverse data sources within _RDF-Connect_
 - Leverage RDF and PROV-O to document and trace pipeline structure and execution
 
 This tutorial is designed to empower researchers, developers, and practitioners with the skills to build scalable,
@@ -44,7 +58,7 @@ maintainable, and explainable streaming pipelines in RDF-based environments.
 
 As the Semantic Web community continues to embrace increasingly diverse data sources and application domains, there is a
 growing need for flexible, interoperable tooling that can bridge gaps between technologies, languages, and paradigms.
-_RDF Connect (RDFC)_ directly addresses this need by providing a language-agnostic framework for building streaming data
+_RDF-Connect (RDFC)_ directly addresses this need by providing a language-agnostic framework for building streaming data
 pipelines that are modular, traceable, and standards-compliant.
 
 Many Semantic Web workflows involve custom tooling built in specific languages, often leading to brittle, monolithic
@@ -65,6 +79,7 @@ It is particularly valuable for early-career researchers, practitioners building
 seeking to build more interoperable and maintainable Semantic Web systems.
 
 ## Format and Schedule
+
 {:#format}
 
 This tutorial is designed to be a **full-day session** as outlined in [](#planning), as it introduces a new framework
@@ -74,10 +89,10 @@ building pipelines and processors.
 
 The program is structured into four sessions, two in the morning and two in the afternoon, progressively building from a
 conceptual overview to hands-on development.
-The day concludes with a collaborative hackathon where participants apply what they’ve learned to explore extensions or 
+The day concludes with a collaborative hackathon where participants apply what they’ve learned to explore extensions or
 develop new applications.
 
-The **first session** introduces RDF Connect at a high level, highlighting its language-agnostic processor architecture.
+The **first session** introduces RDF-Connect at a high level, highlighting its language-agnostic processor architecture.
 This session includes an overview of the tutorial's content, as well as a detailed description of the pipeline
 participants will build throughout the day.
 
@@ -103,8 +118,8 @@ previous session with new data sources, or build a new pipeline using existing p
 |                                      | Topic                                            | Duration |
 |--------------------------------------|--------------------------------------------------|----------|
 | **Morning 1: Introduction** (_1:20_) | Introduction                                     | 0:10     |
-|                                      | Introduction to RDF Connect Processors           | 0:40     |
-|                                      | Introduction to RDF Connect Pipelines            | 0:30     |
+|                                      | Introduction to RDF-Connect Processors           | 0:40     |
+|                                      | Introduction to RDF-Connect Pipelines            | 0:30     |
 | *Break*                              | ---                                              | ---      |
 | **Morning 2: Processors** (_1:20_)   | Recap: How to implement a RDFC Processor?        | 0:10     |
 |                                      | Hands-on: Implementing a processor               | 1:10     |
