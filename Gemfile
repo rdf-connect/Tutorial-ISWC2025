@@ -4,6 +4,8 @@ gem 'nanoc', '~> 4.7'
 
 gem 'scholarmarkdown'
 
+gem 'csv'
+
 # text processing
 gem 'kramdown'
 gem 'rubypants'
