@@ -62,8 +62,8 @@ Participants will learn how to use RDF-Connect to design and execute reusable, e
 pipelines.
 <br class="screen-only" />
 <!-- Object -->
-Participants will construct a streaming data processing pipeline from real-world data: generating a knowledge
-graph from the Japan Meteorological Agency’s weather forecasts for Nara, Japan. They will: (i) Construct a machine
+Participants will construct a streaming data processing pipeline from real-world data: generating a weather forecast knowledge
+graph from the Japanese Meteorological Agency. They will: (i) Construct a machine
 learning pipeline using processors in multiple programming languages, (ii) Create custom data processors for diverse
 endpoints, (iii) Explore provenance tracking using RDF and PROV-O ontology.
 <!-- Conclusion -->
@@ -97,13 +97,9 @@ strategies in Semantic Web research and development.</p>
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Description</h2>
 
-      <p id="description">This tutorial introduces <em>RDF-Connect (RDF-C)</em>, a novel, language-agnostic framework for constructing streaming data
-processing pipelines for RDF and non-RDF data. By leveraging RDF and PROV-O, RDF-C enables seamless integration of data
-processors in multiple programming languages. The tutorial focuses on pipeline construction and processor development,
-equipping participants to build their own streaming workflows.</p>
+      <p id="description">This tutorial introduces <a href="https://github.com/rdf-connect/"><em>RDF-Connect (RDF-C)</em></a>, a novel, language-agnostic framework for constructing streaming data processing pipelines for RDF and non-RDF data. By leveraging RDF and PROV-O, RDF-C enables seamless integration of data processors in multiple programming languages. The tutorial focuses on pipeline construction and processor development, equipping participants to build their own streaming workflows.</p>
 
-      <p>Participants will gain hands-on experience with RDF-C, learning how to build pipelines by chaining modular components (
-processors) that perform specific operations on (RDF) data streams. The tutorial focuses on implementing custom
+      <p>Participants will gain hands-on experience with RDF-C, learning how to build pipelines by chaining modular components (a.k.a <em>processors</em>) that perform specific operations on (RDF) data streams. The tutorial focuses on implementing custom
 processors and integrating them into functioning pipelines. Instead of solving a specific data processing problem, it
 demonstrates structuring and managing adaptable (RDF) data workflows across domains and use cases.</p>
 
@@ -114,9 +110,9 @@ illustrates how different processors can be combined – such as a REST API clie
 for language translation, a Java-based RML engine and SHACL validator, and a triple store (SPARQL) update processor.</p>
 
       <p>The expected outcome will be a functional pipeline created by the participants that integrates both existing and custom
-components within the RDF-Connect framework. The pipeline will continuously extract and transform weather forecast data
+components within the RDF-C framework. The pipeline will continuously extract and transform weather forecast data
 from the Japan Meteorological Agency’s API to RDF. It will then validate the data against a predefined schema using a
-SHACL validator. Finally, the custom processor, implemented by the participant, will perform language-aware
+SHACL validator. Then, the custom processor implemented by the participant, will perform language-aware
 transformations based on a machine learning model. This processor will translate literal objects tagged as Japanese (
 <code>@ja</code>) into English, generating new triples tagged as English (<code>@en</code>). The resulting RDF data will be written into a
 triple store using a SPARQL-based processor.</p>
@@ -135,31 +131,25 @@ maintainable, and explainable streaming pipelines using RDF-based technologies.<
       <h2 id="motivation">Motivation</h2>
 
       <p id="motivation">As the Semantic Web community embraces increasingly diverse data sources and application domains, there is a growing
-need for flexible, interoperable tooling bridging technology, language, and paradigm gaps. <em>RDF-Connect (RDF-C)</em>
-directly addresses this need by providing a language-agnostic framework for building modular, reusable and traceable
+need for flexible, interoperable tooling bridging technology, language, and paradigm gaps.
+RDF-C directly addresses this need by providing a language-agnostic framework for building modular, reusable and traceable
 streaming data pipelines.</p>
 
       <p>Semantic Web workflows often use custom tooling in specific languages, leading to brittle, monolithic systems difficult
-to maintain, extend, and reuse. RDF-C addresses these challenges by decoupling processing logic from implementation
-language and describing pipeline configurations using SHACL and an extension of PROV-O. This approach simplifies
+to maintain, extend, and reuse. RDF-C addresses these challenges by defining a <a href="https://rdf-connect.github.io/specification/">specification</a> that decouples processing logic from implementation
+language and describes pipeline configurations using SHACL and an extension of PROV-O. This approach simplifies
 pipeline component combination, reasoning, and sharing across teams and communities.</p>
 
-      <p>Moreover, the importance of provenance is growing rapidly, especially in the age of AI-generated content and automated
-decision-making. RDF-C simplifies the publication of machine-readable documentation, aligning with FAIR principles, of
-data transformations, enhancing transparency, reproducibility, and trust.</p>
+      <p>Moreover, the importance of provenance is more pressing than ever, especially in the current context of AI-generated content and automated decision-making. RDF-C simplifies the publication of machine-readable documentation, in alignment with the FAIR principles, of data transformations, enhancing transparency, reproducibility, and trust.</p>
 
       <p>This tutorial aims to fill a critical gap in current Semantic Web tooling by introducing a practical, extensible way to
-build
-explainable and modular streaming data pipelines. It is particularly valuable for early-career researchers,
+build explainable and modular streaming data pipelines. It is particularly valuable for early-career researchers,
 practitioners building real-world applications, and anyone seeking to build more interoperable and maintainable
 data-centric systems.</p>
 
       <h2 id="format-and-schedule">Format and Schedule</h2>
 
-      <p id="format">This tutorial is designed as a <strong>full-day session</strong> as outlined in <a href="#planning">Table 1</a>, as it introduces a new framework
-and guides participants through conceptual foundations and hands-on implementation.
-A half-day format would not suffice to cover both RDF-C’s design principles and provide meaningful pipeline and
-processor building experience.</p>
+      <p id="format">This tutorial is designed as a <strong>full-day session</strong> as outlined in <a href="#planning">Table 1</a>. It includes presentations of the conceptual foundations of the RDF-C framework and hands-on implementation.</p>
 
       <figure id="planning" class="table">
 
@@ -240,20 +230,18 @@ conceptual overview to hands-on development.
 The day concludes with a collaborative hackathon where participants apply what they’ve learned to explore extensions or
 develop new applications.</p>
 
-      <p>The <strong>first session</strong> introduces RDF-Connect at a high level, highlighting its language-agnostic processor architecture.
-It also provides an overview of the tutorial’s content and a detailed description of the pipeline participants will
+      <p>The <strong>first session</strong> introduces RDF-C architecture at a high level.
+It also provides an overview of the tutorial’s content and a detailed description of the pipeline, participants will
 build throughout the day.</p>
 
-      <p>The <strong>second session</strong> focuses on processor development. Participants learn to implement a processor in a chosen
-language and configure it for pipeline integration.
-They implement a processor that transforms triples, identifying those with a literal object and a language tag <code>@ja</code>.
-It then translates these triples to English and adds them as a new triple with the language tag <code>@en</code>.
-We can implement this with a lightweight ML model translating input from Japanese to English locally.
-Alternatively, we could implement a processor sending input to a remote translation service.</p>
+      <p>The <strong>second session</strong> focuses on processor development. Participants will learn to implement a processor in a
+language of choice and configure it for pipeline integration.
+They will implement a processor that transforms a stream of RDF triples based on a configured language translation.
+The implementation will leverage a lightweight ML model to perform the translations locally.</p>
 
       <p>The <strong>third session</strong> covers pipeline assembly using both existing and the participant’s custom-built processor.
 Participants will construct a working streaming pipeline that pulls data, applies transformations, validates,
-and publishes results to a triple store.</p>
+and publishes the results to a triple store.</p>
 
       <p>The <strong>fourth session</strong> is a hackathon, where all participants work together to either extend the pipeline created in the
 previous session with new data sources, or build a new pipeline using existing processors to achieve a different goal.</p>
@@ -268,9 +256,9 @@ previous session with new data sources, or build a new pipeline using existing p
       <p>The tutorial is guided by slides, which are shared online.
 For the hands-on coding sessions, we provide a git repository with separate branches for all sequentially completed tasks.
 This will allow participants that are unable to complete a certain task,
-to still begin with the next task by checking out a different branch.</p>
-
-      <p>The slides and git repository are open for everyone under the CC BY 4.0 license.</p>
+to still begin with the next task by checking out the corresponding branch.
+An <a href="https://rdf-connect.github.io/specification/">online specification</a> is provided with detailed technical desciptions.
+The slides, specification and git repository are open for everyone under the CC BY 4.0 license.</p>
 
     </div>
 </section>
@@ -279,9 +267,9 @@ to still begin with the next task by checking out a different branch.</p>
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Audience</h2>
 
-      <p id="audience">This tutorial targets intermediate and advanced developers and researchers interested in data processing pipelines using
-Semantic Web technologies. It is designed to accommodate about 20 participants with a basic understanding of Turtle,
-SHACL, and Python, JavaScript, or Java.</p>
+      <p id="audience">This tutorial targets intermediate to advanced developers and researchers interested in data processing pipelines using
+Semantic Web technologies. It is designed to accommodate about 20 participants with a basic understanding of RDF and
+SHACL, and programming experience in either Python, JavaScript, or Java.</p>
 
     </div>
 </section>
@@ -291,19 +279,17 @@ SHACL, and Python, JavaScript, or Java.</p>
       <h2 property="schema:name">Presenters</h2>
 
       <p>This tutorial will be presented by Arthur Vercruysse (primary
-contact: <a href="mailto:arthur.vercruysse@ugent.be">arthur.vercruysse@ugent.be</a>) and Ieben Smessaert from Ghent University –
+contact: <a href="mailto:arthur.vercruysse@ugent.be">arthur.vercruysse@ugent.be</a>), Ieben Smessaert and Julián Rojas from Ghent University –
 imec.</p>
 
-      <p>Arthur Vercruysse is a fourth-year PhD student who began his research journey in Knowledge Graph construction and later pivoted to developer tooling, driven by his love for compilers.
-He is the main architect behind RDFC.</p>
+      <p>Arthur Vercruysse is a third year PhD student, who started his research journey with Knowledge Graph construction, and focused on
+developer tooling with his love for compilers.</p>
 
-      <p>Ieben Smessaert is a second year PhD student and one of the main developers and maintainers of the RDF-Connect
-ecosystem.
-He actively applies RDF-Connect in real-world use cases that include lifecycle management of DCAT-AP feeds within the
-SEMIC community, and publication of geospatial knowledge graphs for the Flemish Institute for the sea.
-Ieben also has experience by assisting practical sessions of
+      <p>Ieben Smessaert is a second year PhD student and one of the main developers and maintainers of the RDF-C ecosystem. He actively applies RDF-C in real-world use cases and also has teaching experience by assisting practical sessions of
 the <a href="http://rubenverborgh.github.io/WebFundamentals/">Web Development course</a>
 by <a href="https://ruben.verborgh.org/">Ruben Verborgh</a> at Ghent University.</p>
+
+      <p>Julián Rojas is postdoctoral researcher focused on efficient knowledge graph lifecycle management at Web scale. He also contributes to the development and maintenance of the RDF-C ecosystem and applies it on various applied research projects.</p>
 
     </div>
 </section>
