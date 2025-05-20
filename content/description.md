@@ -2,13 +2,9 @@
 
 {:#description}
 
-This tutorial introduces _RDF-Connect (RDF-C)_, a novel, language-agnostic framework for constructing streaming data
-processing pipelines for RDF and non-RDF data. By leveraging RDF and PROV-O, RDF-C enables seamless integration of data
-processors in multiple programming languages. The tutorial focuses on pipeline construction and processor development,
-equipping participants to build their own streaming workflows.
+This tutorial introduces [_RDF-Connect (RDF-C)_](https://github.com/rdf-connect/), a novel, language-agnostic framework for constructing streaming data processing pipelines for RDF and non-RDF data. By leveraging RDF and PROV-O, RDF-C enables seamless integration of data processors in multiple programming languages. The tutorial focuses on pipeline construction and processor development, equipping participants to build their own streaming workflows.
 
-Participants will gain hands-on experience with RDF-C, learning how to build pipelines by chaining modular components (
-processors) that perform specific operations on (RDF) data streams. The tutorial focuses on implementing custom
+Participants will gain hands-on experience with RDF-C, learning how to build pipelines by chaining modular components (a.k.a _processors_) that perform specific operations on (RDF) data streams. The tutorial focuses on implementing custom
 processors and integrating them into functioning pipelines. Instead of solving a specific data processing problem, it
 demonstrates structuring and managing adaptable (RDF) data workflows across domains and use cases.
 
@@ -19,9 +15,9 @@ illustrates how different processors can be combined -- such as a REST API clien
 for language translation, a Java-based RML engine and SHACL validator, and a triple store (SPARQL) update processor.
 
 The expected outcome will be a functional pipeline created by the participants that integrates both existing and custom
-components within the RDF-Connect framework. The pipeline will continuously extract and transform weather forecast data
+components within the RDF-C framework. The pipeline will continuously extract and transform weather forecast data
 from the Japan Meteorological Agency’s API to RDF. It will then validate the data against a predefined schema using a
-SHACL validator. Finally, the custom processor, implemented by the participant, will perform language-aware
+SHACL validator. Then, the custom processor implemented by the participant, will perform language-aware
 transformations based on a machine learning model. This processor will translate literal objects tagged as Japanese (
 `@ja`) into English, generating new triples tagged as English (`@en`). The resulting RDF data will be written into a
 triple store using a SPARQL-based processor.
@@ -40,22 +36,19 @@ maintainable, and explainable streaming pipelines using RDF-based technologies.
 {:#motivation}
 
 As the Semantic Web community embraces increasingly diverse data sources and application domains, there is a growing
-need for flexible, interoperable tooling bridging technology, language, and paradigm gaps. _RDF-Connect (RDF-C)_
-directly addresses this need by providing a language-agnostic framework for building modular, reusable and traceable
+need for flexible, interoperable tooling bridging technology, language, and paradigm gaps.
+RDF-C directly addresses this need by providing a language-agnostic framework for building modular, reusable and traceable
 streaming data pipelines.
 
 Semantic Web workflows often use custom tooling in specific languages, leading to brittle, monolithic systems difficult
-to maintain, extend, and reuse. RDF-C addresses these challenges by decoupling processing logic from implementation
-language and describing pipeline configurations using SHACL and an extension of PROV-O. This approach simplifies
+to maintain, extend, and reuse. RDF-C addresses these challenges by defining a [specification](https://rdf-connect.github.io/specification/) that decouples processing logic from implementation
+language and describes pipeline configurations using SHACL and an extension of PROV-O. This approach simplifies
 pipeline component combination, reasoning, and sharing across teams and communities.
 
-Moreover, the importance of provenance is growing rapidly, especially in the age of AI-generated content and automated
-decision-making. RDF-C simplifies the publication of machine-readable documentation, aligning with FAIR principles, of
-data transformations, enhancing transparency, reproducibility, and trust.
+Moreover, the importance of provenance is more pressing than ever, especially in the current context of AI-generated content and automated decision-making. RDF-C simplifies the publication of machine-readable documentation, in alignment with the FAIR principles, of data transformations, enhancing transparency, reproducibility, and trust.
 
 This tutorial aims to fill a critical gap in current Semantic Web tooling by introducing a practical, extensible way to
-build
-explainable and modular streaming data pipelines. It is particularly valuable for early-career researchers,
+build explainable and modular streaming data pipelines. It is particularly valuable for early-career researchers,
 practitioners building real-world applications, and anyone seeking to build more interoperable and maintainable
 data-centric systems.
 
@@ -63,11 +56,7 @@ data-centric systems.
 
 {:#format}
 
-This tutorial is designed as a **full-day session** as outlined in [](#planning), as it introduces a new framework
-and guides participants through conceptual foundations and hands-on implementation.
-A half-day format would not suffice to cover both RDF-C's design principles and provide meaningful pipeline and
-processor building experience.
-
+This tutorial is designed as a **full-day session** as outlined in [](#planning). It includes presentations of the conceptual foundations of the RDF-C framework and hands-on implementation.
 
 <figure id="planning" markdown="1" class="table">
 
@@ -96,20 +85,18 @@ conceptual overview to hands-on development.
 The day concludes with a collaborative hackathon where participants apply what they’ve learned to explore extensions or
 develop new applications.
 
-The **first session** introduces RDF-Connect at a high level, highlighting its language-agnostic processor architecture.
-It also provides an overview of the tutorial’s content and a detailed description of the pipeline participants will
+The **first session** introduces RDF-C architecture at a high level.
+It also provides an overview of the tutorial’s content and a detailed description of the pipeline, participants will
 build throughout the day.
 
-The **second session** focuses on processor development. Participants learn to implement a processor in a chosen
-language and configure it for pipeline integration.
-They implement a processor that transforms triples, identifying those with a literal object and a language tag `@ja`.
-It then translates these triples to English and adds them as a new triple with the language tag `@en`.
-We can implement this with a lightweight ML model translating input from Japanese to English locally.
-Alternatively, we could implement a processor sending input to a remote translation service.
+The **second session** focuses on processor development. Participants will learn to implement a processor in a
+language of choice and configure it for pipeline integration.
+They will implement a processor that transforms a stream of RDF triples based on a configured language translation.
+The implementation will leverage a lightweight ML model to perform the translations locally.
 
 The **third session** covers pipeline assembly using both existing and the participant's custom-built processor.
 Participants will construct a working streaming pipeline that pulls data, applies transformations, validates,
-and publishes results to a triple store.
+and publishes the results to a triple store.
 
 The **fourth session** is a hackathon, where all participants work together to either extend the pipeline created in the
 previous session with new data sources, or build a new pipeline using existing processors to achieve a different goal.

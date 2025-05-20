@@ -15,8 +15,8 @@ Participants will learn how to use RDF-Connect to design and execute reusable, e
 pipelines.
 <br class='screen-only' />
 <!-- Object -->
-Participants will construct a streaming data processing pipeline from real-world data: generating a knowledge
-graph from the Japan Meteorological Agency’s weather forecasts for Nara, Japan. They will: (i) Construct a machine
+Participants will construct a streaming data processing pipeline from real-world data: generating a weather forecast knowledge
+graph from the Japanese Meteorological Agency. They will: (i) Construct a machine
 learning pipeline using processors in multiple programming languages, (ii) Create custom data processors for diverse
 endpoints, (iii) Explore provenance tracking using RDF and PROV-O ontology.
 <!-- Conclusion -->
