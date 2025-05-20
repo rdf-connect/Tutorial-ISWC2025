@@ -9,6 +9,9 @@
 LNCS template styles: http://www.springer.com/computer/lncs?SGWID=0-164-6-793341-0
 */
 
+p+p {
+  text-indent: 1em;
+}
 @media print {
 /*
 @media print and (width:210mm) and (height:297mm) {
