@@ -2,22 +2,26 @@
 
 {:#description}
 
-This tutorial introduces [_RDF-Connect (RDF-C)_](https://github.com/rdf-connect/), a novel, language-agnostic framework for constructing streaming data processing pipelines for RDF and non-RDF data. By leveraging RDF and PROV-O, RDF-C enables seamless integration of data processors in multiple programming languages. The tutorial focuses on pipeline construction and processor development, equipping participants to build their own streaming workflows.
+This tutorial introduces [_RDF-Connect (RDFC)_](https://github.com/rdf-connect/), a novel, language-agnostic framework
+for constructing streaming data processing pipelines for RDF and non-RDF data. By leveraging RDF and PROV-O, RDFC
+enables seamless integration of data processors in multiple programming languages. The tutorial focuses on pipeline
+construction and processor development, equipping participants to build their own streaming workflows.
 
-Participants will gain hands-on experience with RDF-C, learning how to build pipelines by chaining modular components (a.k.a _processors_) that perform specific operations on (RDF) data streams. The tutorial focuses on implementing custom
+Participants will gain hands-on experience with RDFC, learning how to build pipelines by chaining modular components (
+a.k.a. _processors_) that perform specific operations on (RDF) data streams. The tutorial focuses on implementing custom
 processors and integrating them into functioning pipelines. Instead of solving a specific data processing problem, it
 demonstrates structuring and managing adaptable (RDF) data workflows across domains and use cases.
 
 To make the learning experience tangible, the tutorial includes a practical project based on a common use case for
 ISWC's audience:
-creating a _live_ and multilingual RDF knowledge graph using data from the Meteorological Agency of Japan. This example
+creating a _live_ and multilingual RDF knowledge graph using data from the Japan Meteorological Agency. This example
 illustrates how different processors can be combined -- such as a REST API client in JavaScript, a Python-based ML model
-for language translation, a Java-based RML engine and SHACL validator, and a triple store (SPARQL) update processor.
+for language translation, a Java-based RML engine, a SHACL validator, and a triple store (SPARQL) update processor.
 
 The expected outcome will be a functional pipeline created by the participants that integrates both existing and custom
-components within the RDF-C framework. The pipeline will continuously extract and transform weather forecast data
+components within the RDFC framework. The pipeline will continuously extract and transform weather forecast data
 from the Japan Meteorological Agency’s API to RDF. It will then validate the data against a predefined schema using a
-SHACL validator. Then, the custom processor implemented by the participant, will perform language-aware
+SHACL validator. Then, the custom processor, implemented by the participant, will perform language-aware
 transformations based on a machine learning model. This processor will translate literal objects tagged as Japanese (
 `@ja`) into English, generating new triples tagged as English (`@en`). The resulting RDF data will be written into a
 triple store using a SPARQL-based processor.
@@ -37,15 +41,19 @@ maintainable, and explainable streaming pipelines using RDF-based technologies.
 
 As the Semantic Web community embraces increasingly diverse data sources and application domains, there is a growing
 need for flexible, interoperable tooling bridging technology, language, and paradigm gaps.
-RDF-C directly addresses this need by providing a language-agnostic framework for building modular, reusable and traceable
+RDFC directly addresses this need by providing a language-agnostic framework for building modular, reusable and
+traceable
 streaming data pipelines.
 
 Semantic Web workflows often use custom tooling in specific languages, leading to brittle, monolithic systems difficult
-to maintain, extend, and reuse. RDF-C addresses these challenges by defining a [specification](https://rdf-connect.github.io/specification/) that decouples processing logic from implementation
+to maintain, extend, and reuse. RDFC addresses these challenges by defining
+a [specification](https://rdf-connect.github.io/specification/) that decouples processing logic from implementation
 language and describes pipeline configurations using SHACL and an extension of PROV-O. This approach simplifies
 pipeline component combination, reasoning, and sharing across teams and communities.
 
-Moreover, the importance of provenance is more pressing than ever, especially in the current context of AI-generated content and automated decision-making. RDF-C simplifies the publication of machine-readable documentation, in alignment with the FAIR principles, of data transformations, enhancing transparency, reproducibility, and trust.
+Moreover, the importance of provenance is more pressing than ever, especially in the current context of AI-generated
+content and automated decision-making. RDFC simplifies the publication of machine-readable documentation, in alignment
+with the FAIR principles, of data transformations, enhancing transparency, reproducibility, and trust.
 
 This tutorial aims to fill a critical gap in current Semantic Web tooling by introducing a practical, extensible way to
 build explainable and modular streaming data pipelines. It is particularly valuable for early-career researchers,
@@ -56,7 +64,8 @@ data-centric systems.
 
 {:#format}
 
-This tutorial is designed as a **full-day session** as outlined in [](#planning). It includes presentations of the conceptual foundations of the RDF-C framework and hands-on implementation.
+This tutorial is designed as a **full-day session** as outlined in [](#planning). It includes presentations of the
+conceptual foundations of the RDFC framework and hands-on implementation.
 
 <figure id="planning" markdown="1" class="table">
 
@@ -82,10 +91,10 @@ Planning of the tutorial
 
 The program is structured into four sessions, two in the morning and two in the afternoon, progressively building from a
 conceptual overview to hands-on development.
-The day concludes with a collaborative hackathon where participants apply what they’ve learned to explore extensions or
-develop new applications.
+The day concludes with a collaborative hackathon where participants apply what they have learned to explore extensions
+or develop new applications.
 
-The **first session** introduces RDF-C architecture at a high level.
+The **first session** introduces RDFC's architecture at a high level.
 It also provides an overview of the tutorial’s content and a detailed description of the pipeline, participants will
 build throughout the day.
 
