@@ -7,6 +7,7 @@ imec.
 
 Arthur Vercruysse is a third year PhD student, who started his research journey with Knowledge Graph construction, and focused on
 developer tooling with his love for compilers.
+He is the main architect behind RDFC.
 
 Ieben Smessaert is a second year PhD student and one of the main developers and maintainers of the RDF-C ecosystem. He actively applies RDF-C in real-world use cases and also has teaching experience by assisting practical sessions of
 the [Web Development course](http://rubenverborgh.github.io/WebFundamentals/)
