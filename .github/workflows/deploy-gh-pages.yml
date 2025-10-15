@@ -3,7 +3,10 @@ name: Build and Deploy
 permissions:
   contents: write
 
-on: [push]
+on:
+  push:
+    branches: [main]
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
