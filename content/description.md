@@ -77,8 +77,8 @@ conceptual foundations of the RDFC framework and hands-on implementation.
 |                                      | Hands-on: Assembling a pipeline 🔗                    | 11:30      |
 |--------------------------------------|-------------------------------------------------------|------------|
 | *Lunch Break*                        | ---                                                   | ---        |
-| **Afternoon 1: Roadmap** (_1:30_)    | What is next for RDF-Connect? 🛫                      | 13:30      |
-|                                      | Hands-on: Implementing a custom processor 🏗️          | 14:00      |
+| **Afternoon 1: Roadmap** (_1:30_)    | Hands-on: Implementing a custom processor 🏗️          | 13:30      |
+|                                      | What is next for RDF-Connect? 🛫                      | 14:30      |
 | *Break*                              | ---                                                   | ---        |
 | **Afternoon 1: Hackathon** (_1:30_)  | Hackathon 🧑‍💻                                          | 15:30      |
 
