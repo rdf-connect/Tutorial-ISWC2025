@@ -7,3 +7,4 @@ output
 *.log
 *.diff
 bundled
+node_modules
