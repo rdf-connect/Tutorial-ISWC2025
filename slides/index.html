@@ -72,75 +72,68 @@
     </p>
 </section>
 
-<section id="agenda" class="slide" inlist="" rel="schema:hasPart" resource="#agenda">
+<section id="agenda-1" class="slide" inlist="" rel="schema:hasPart" resource="#agenda-1" style="font-size: medium;">
     <h2 property="schema:name" class="big" style="margin-top: 20px">Agenda</h2>
     <ul>
-        <li style="margin-top: -20px;"><strong>First part: Introduction to RDF-Connect (1:30h)</strong></li>
+        <li style="margin-top: -20px;"><strong>Morning Session 1: Introduction</strong></li>
         <li>
             <ul>
-                <li class="indent">What will we do in this tutorial? 🤔</li>
-                <li class="indent">Assembling our very first pipeline! 🛠️</li>
-                <li class="indent">The what and why of RDF-Connect? 🎯</li>
-                <li class="indent">RDF-Connect Architecture & Components ⚙️</li>
+                <li class="indent"><a href="#what">What will happen in this tutorial? 🤔 (9:00h)</a></li>
+                <li class="indent"><a href="#first-pipeline">Let's get our hands dirty already! 🛠️ (9:10h)</a></li>
+                <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯 (10:00h)</a></li>
             </ul>
         </li>
-        <li style="margin-top: 10px;"><strong>Lunch break 🍔 (1h)</strong></li>
-        <li style="margin-top: 10px;"><strong>Second part: Hands-on (1:30h)</strong></li>
+        <li style="margin-top: 10px;"><strong>Coffee break ☕</strong></li> 
+        <li style="margin-top: 10px;"><strong>Morning Session 2: Architecture</strong></li>
         <li>
             <ul>
-                <li class="indent">Assembling a pipeline 🔗</li>
-                <li class="indent">Implementing a processor 🏗️</li>
+                <li class="indent"><a href="#architecture">RDF-Connect Architecture & Components ⚙️ (11:00h)</a></li>
+                <li class="indent"><a href="#assembling-pipeline">Assembling a pipeline 🔗 (11:30h)</a></li>
             </ul>
         </li>
+        <li style="margin-top: 10px;"><strong>Lunch break 🍣</strong></li>
+        <li><strong>Afternoon Session 1: Roadmap</strong></li>
+        <li>
+            <ul>
+                <li class="indent current"><a href="#custom-processor">Implementing a custom processor 🏗️ (13:30)</a></li>
+                <li class="indent"><a href="#roadmap">What is next for RDF-Connect? 🛫 (14:30h)</a></li>
+            </ul>
+        </li>
+        <li style="margin-top: 10px;"><strong>Coffee break ☕</strong></li>
+        <li><strong>Afternoon Session 2: Hackathon 🧑‍💻</strong></li>
     </ul>
 </section>
 
 <section id="what" class="slide index" inlist="" rel="schema:hasPart" resource="#what">
     <ul style="margin-top: 2em;">
-        <li class="indent">Introduction to RDF-Connect</li>
-        <li class="indent">
+        <li style="margin-top: -20px;"><strong>Morning Session 1: Introduction</strong></li>
+        <li>
             <ul>
-                <li class="indent current"><a href="#what">What will we do in this tutorial? 🤔</a></li>
-                <li class="indent"><a href="#first-pipeline">Assembling our very first pipeline! 🛠️</a></li>
-                <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯</a></li>
-                <li class="indent"><a href="#architecture_rdfc">RDF-Connect Architecture & Components ⚙️</a></li>
-            </ul>
-        </li>
-        <li class="indent" style="margin-top: 2em;"><strong>Hands-on</strong></li>
-        <li class="indent">
-            <ul>
-                <li class="indent"><a href="#pipeline">Assembling a pipeline 🔗</a></li>
-                <li class="indent"><a href="#processor">Implementing a processor 🏗️</a></li>
+                <li class="indent current"><a href="#what">What will we do in this tutorial? 🤔 (9:00h)</a></li>
+                <li class="indent"><a href="#first-pipeline">Let's get our hands dirty already! 🛠️ (9:10h)</a></li>
+                <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯 (10:00h)</a></li>
             </ul>
         </li>
     </ul>
 </section>
 
-<section id="overview" class="slide" inlist="" rel="schema:hasPart" resource="#overview">
+<section id="overview-1" class="slide" inlist="" rel="schema:hasPart" resource="#overview-1">
     <h2 property="schema:name">Tutorial overview</h2>
-    <!--I want to create a layout in this slide with 2 rows, and the first row having 2 columns-->
-    <div style="display: flex; flex-direction: row; justify-content: space-around; margin-top: 20px;">
-        <div style="flex: 1; text-align: left; margin-right: 10px;">
-            <h4 style="margin: unset;">Part 1: Introduction to RDF-Connect</h4>
+    <div style="display: flex; flex-direction: column; justify-content: space-around; margin-top: 20px;">
+        <div style="text-align: left; margin-right: 10px;">
+            <h4 style="margin: unset;">Theory and practice intertwined</h4>
             <p style="font-size: 12pt;">
-                You will learn the motivation behind RDF-Connect, its conceptual model and architecture,
-                by following a running example of a knowledge graph lifecycle pipeline.
-            </p>
-        </div>
-        <div style="flex: 1; text-align: left; margin-left: 20px;">
-            <h4 style="margin: unset;">Part 2: Hands-on</h4>
-            <p style="font-size: 12pt;">
-                You will implement a ML-based processor and integrate it in the knowledge graph lifecycle pipeline.
+                You will learn the motivation behind RDF-Connect, its conceptual model, architecture and roadmap.
+                All while setting up, extending and running an example RDF-Connect pipeline.
             </p>
         </div>
     </div>
     <div style="display: flex; flex-direction: column; justify-content: space-around;">
-        <div style="text-align: center;">
-            <h4 style="margin: unset;">KG lifecycle pipeline</h4>
+        <div style="text-align: left;">
+            <h4 style="margin: unset;">Example pipeline: An RDF KG lifecycle</h4>
             <p style="font-size: 12pt; text-align: left;">
-                A pipeline of a knowledge graph lifecycle process, where weather data (from an Austrian API service)
-                will be collected, transformed into RDF, validated against a SHACL shape, enriched and published on
-                a RDF graph store.
+                A pipeline of a knowledge graph lifecycle process, where weather data (from the Japanese meteorological API service)
+                will be collected, transformed into RDF, enriched, validated against a SHACL shape, and published on a RDF graph store.
             </p>
             <div style="text-align: center">
                 <img src="img/fig-0.svg" style="width: 80%;"/>
@@ -149,22 +142,41 @@
     </div>
 </section>
 
+<section id="overview-2" class="slide" inlist="" rel="schema:hasPart" resource="#overview-1">
+    <h2 property="schema:name">Tutorial resources</h2>
+    <div style="display: flex; flex-direction: row; justify-content: space-around; margin-top: 20px;">
+        <div style="flex: 1; text-align: left; margin-right: 10px;">
+            <h4 style="margin: unset;">Tutorial Website</h4>
+            <p style="font-size: 12pt;">
+                The tutorial <a href="https://rdf-connect.github.io/Tutorial-ISWC2025/">website</a> 
+                has a complete description and motivation for the tutorial. There you may also find
+                all the resources you need to follow along, including these slides.
+            </p>
+            <div style="text-align: center">
+                <img src="img/website.png" style="width: 80%;"/>
+            </div>
+        </div>
+        <div style="flex: 1; text-align: left; margin-right: 10px;">
+            <h4 style="margin: unset;">Developer resources</h4>
+            <p style="font-size: 12pt;">
+                We have prepared a <a href="https://github.com/rdf-connect/nara-weather-forecast-kg-pipeline">GitHub repository</a> containing a step-by-step guide (split over dedicated branches)
+                that will allow you to start and check the result of any task of the tutorial at any time.
+            </p>
+            <div style="text-align: center">
+                <img src="img/github.png" style="width: 70%;" />
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="first-pipeline" class="slide index" inlist="" rel="schema:hasPart" resource="#first-pipeline">
     <ul style="margin-top: 2em;">
-        <li class="indent">Introduction to RDF-Connect</li>
-        <li class="indent">
+        <li style="margin-top: -20px;"><strong>Morning Session 1: Introduction</strong></li>
+        <li>
             <ul>
-                <li class="indent"><a href="#what">What will we do in this tutorial? 🤔</a></li>
-                <li class="indent current"><a href="#first-pipeline">Assembling our very first pipeline! 🛠️</a></li>
-                <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯</a></li>
-                <li class="indent"><a href="#architecture_rdfc">RDF-Connect Architecture & Components ⚙️</a></li>
-            </ul>
-        </li>
-        <li class="indent" style="margin-top: 2em;"><strong>Hands-on</strong></li>
-        <li class="indent">
-            <ul>
-                <li class="indent"><a href="#pipeline">Assembling a pipeline 🔗</a></li>
-                <li class="indent"><a href="#processor">Implementing a processor 🏗️</a></li>
+                <li class="indent"><a href="#what">What will we do in this tutorial? 🤔 (9:00h)</a></li>
+                <li class="indent current"><a href="#first-pipeline">Let's get our hands dirty already! 🛠️ (9:10h)</a></li>
+                <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯 (10:00h)</a></li>
             </ul>
         </li>
     </ul>
@@ -177,13 +189,13 @@
         <img src="img/pipeline1.svg" style="max-width:80%;" alt="Pipeline 1 Diagram">
     </div>
     <p style="margin-top: -0.5em; line-height: 1.2em;">
-        We want to <strong>fetch the GeoSphere weather data API</strong>,<br/>
-        and <strong>log its contents</strong> to the console.
+        We want to <strong>[fetch the <a href="https://www.jma.go.jp/jma/indexe.html">JMA meteorological API</a>]</strong>
+        and <strong>[log its contents]</strong> to the console.
     </p>
 </section>
 
 <section id="tutorial-repo" class="slide" inlist="" rel="schema:hasPart" resource="#tutorial-repo">
-    <h2 property="schema:name">We provide a step-by-step<br/>tutorial code repository</h2>
+    <h2 property="schema:name">Follow on our step-by-step<br/>tutorial code repository</h2>
 
     <ul>
         <li style="margin-bottom: 1.5em; margin-top: 2em;">Boilerplate template to get started</li>
@@ -201,6 +213,29 @@
                 <span style="font-size: 1em; border-bottom: 2px solid #b8c3d1;">open.gent/r/iswc-rdfc-repo</span>
             </div>
         </a>
+    </div>
+</section>
+
+<section id="project-environment" class="slide" inlist="" rel="schema:hasPart" resource="#project-environment">
+    <h2 property="schema:name">Step 0: Choose your environment</h2>
+
+    <p style="font-size:1.2em;">Run locally or in a containerized environment:</p>
+
+    <pre><code class="language-bash" style="line-height: 1.2em; font-size: 0.75em;" data-trim>
+# Build the Docker image
+cd pipeline/resources
+docker build -t devbox .
+
+cd pipeline/  # or `cd ..` to go back to the pipeline directory
+
+# Run a container with an interactive shell
+docker run -it --rm -v $(pwd):/workspace devbox
+# You can now run commands like `npm install` or `npx rdfc pipeline.ttl` 
+# inside the container
+  </code></pre>
+
+    <div style="font-size:0.9em; margin-top:1em;">
+        This way you avoid having to install running environments for Python, Node.js, Java, etc.
     </div>
 </section>
 
@@ -275,7 +310,7 @@ npm install @rdfc/log-processor-ts
     <pre style="padding-top: 0.5em; padding-bottom: 0.5em; margin-bottom: 0.3em; margin-top: -0.3em;"><code
             class="language-turtle" style="line-height: 1.2em; font-size: 0.75em;" data-trim>
 &lt;fetcher&gt; a rdfc:HttpFetch;
-    rdfc:url "https://dataset.api.hub.geosphere.at/v1/station/current/tawes-v1-10min?parameters=TL,RR&station_ids=11035";
+    rdfc:url "TODO: API URL";
     rdfc:writer &lt;json&gt;.
     </code></pre>
 
@@ -352,20 +387,12 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
 
 <section id="why_rdfc" class="slide index" inlist="" rel="schema:hasPart" resource="#why_rdfc">
     <ul style="margin-top: 2em;">
-        <li class="indent">Introduction to RDF-Connect</li>
-        <li class="indent">
+        <li style="margin-top: -20px;"><strong>Morning Session 1: Introduction</strong></li>
+        <li>
             <ul>
-                <li class="indent"><a href="#what">What will we do in this tutorial? 🤔</a></li>
-                <li class="indent"><a href="#first-pipeline">Assembling our very first pipeline! 🛠️</a></li>
-                <li class="indent current"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯</a></li>
-                <li class="indent"><a href="#architecture_rdfc">RDF-Connect Architecture & Components ⚙️</a></li>
-            </ul>
-        </li>
-        <li class="indent" style="margin-top: 2em;"><strong>Hands-on</strong></li>
-        <li class="indent">
-            <ul>
-                <li class="indent"><a href="#pipeline">Assembling a pipeline 🔗</a></li>
-                <li class="indent"><a href="#processor">Implementing a processor 🏗️</a></li>
+                <li class="indent"><a href="#what">What will we do in this tutorial? 🤔 (9:00h)</a></li>
+                <li class="indent"><a href="#first-pipeline">Let's get our hands dirty already! 🛠️ (9:10h)</a></li>
+                <li class="indent current"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯 (10:00h)</a></li>
             </ul>
         </li>
     </ul>
@@ -583,23 +610,49 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
     </table>
 </section>
 
-<section id="architecture_rdfc" class="slide index" inlist="" rel="schema:hasPart" resource="#architecture_rdfc">
-    <ul style="margin-top: 2em;">
-        <li class="indent">Introduction to RDF-Connect</li>
-        <li class="indent">
+<section id="coffee-break-1" class="slide index" inlist="" rel="schema:hasPart" resource="#coffee-break-1">
+    <h2 property="schema:name" class="big">Coffee break! ☕</h2>
+</section>
+
+<section id="agenda-2" class="slide" inlist="" rel="schema:hasPart" resource="#agenda-2" style="font-size: medium;">
+    <h2 property="schema:name" class="big" style="margin-top: 20px">Agenda</h2>
+    <ul>
+        <li style="margin-top: -20px;"><strong>Morning Session 1: Introduction</strong></li>
+        <li>
             <ul>
-                <li class="indent"><a href="#what">What will we do in this tutorial? 🤔</a></li>
-                <li class="indent"><a href="#first-pipeline">Assembling our very first pipeline! 🛠️</a></li>
-                <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯</a></li>
-                <li class="indent current"><a href="#architecture_rdfc">RDF-Connect Architecture & Components ⚙️</a>
-                </li>
+                <li class="indent"><a href="#what">What will happen in this tutorial? 🤔 (9:00h)</a></li>
+                <li class="indent"><a href="#first-pipeline">Let's get our hands dirty already! 🛠️ (9:10h)</a></li>
+                <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯 (10:00h)</a></li>
             </ul>
         </li>
-        <li class="indent" style="margin-top: 2em;"><strong>Hands-on</strong></li>
-        <li class="indent">
+        <li style="margin-top: 10px;"><strong>Coffee break ☕</strong></li> 
+        <li style="margin-top: 10px;"><strong>Morning Session 2: Architecture</strong></li>
+        <li>
             <ul>
-                <li class="indent"><a href="#pipeline">Assembling a pipeline 🔗</a></li>
-                <li class="indent"><a href="#processor">Implementing a processor 🏗️</a></li>
+                <li class="indent"><a href="#architecture">RDF-Connect Architecture & Components ⚙️ (11:00h)</a></li>
+                <li class="indent"><a href="#assembling-pipeline">Assembling a pipeline 🔗 (11:30h)</a></li>
+            </ul>
+        </li>
+        <li style="margin-top: 10px;"><strong>Lunch break 🍣</strong></li>
+        <li><strong>Afternoon Session 1: Roadmap</strong></li>
+        <li>
+            <ul>
+                <li class="indent current"><a href="#custom-processor">Implementing a custom processor 🏗️ (13:30)</a></li>
+                <li class="indent"><a href="#roadmap">What is next for RDF-Connect? 🛫 (14:30h)</a></li>
+            </ul>
+        </li>
+        <li style="margin-top: 10px;"><strong>Coffee break ☕</strong></li>
+        <li><strong>Afternoon Session 2: Hackathon 🧑‍💻</strong></li>
+    </ul>
+</section>
+
+<section id="architecture" class="slide index" inlist="" rel="schema:hasPart" resource="#architecture">
+    <ul style="margin-top: 2em;">
+        <li style="margin-top: 10px;"><strong>Morning Session 2: Architecture</strong></li>
+        <li>
+            <ul>
+                <li class="indent current"><a href="#architecture">RDF-Connect Architecture & Components ⚙️ (11:00h)</a></li>
+                <li class="indent"><a href="#assembling-pipeline">Assembling a pipeline 🔗 (11:30h)</a></li>
             </ul>
         </li>
     </ul>
@@ -889,26 +942,13 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
     </ul>
 </section>
 
-<section id="recap_proc" class="slide index" inlist="" rel="schema:hasPart" resource="#recap_proc">
-    <h2 property="schema:name" class="big">Finally! Lunch break 🍔</h2>
-</section>
-
-<section id="pipeline" class="slide index" inlist="" rel="schema:hasPart" resource="#pipeline">
+<section id="assembling-pipeline" class="slide index" inlist="" rel="schema:hasPart" resource="#assembling-pipeline">
     <ul style="margin-top: 2em;">
-        <li class="indent">Introduction to RDF-Connect</li>
-        <li class="indent">
+        <li style="margin-top: 10px;"><strong>Morning Session 2: Architecture</strong></li>
+        <li>
             <ul>
-                <li class="indent"><a href="#what">What will we do in this tutorial? 🤔</a></li>
-                <li class="indent"><a href="#first-pipeline">Assembling our very first pipeline! 🛠️</a></li>
-                <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯</a></li>
-                <li class="indent"><a href="#architecture_rdfc">RDF-Connect Architecture & Components ⚙️</a></li>
-            </ul>
-        </li>
-        <li class="indent" style="margin-top: 2em;"><strong>Hands-on</strong></li>
-        <li class="indent">
-            <ul>
-                <li class="indent current"><a href="#pipeline">Assembling a pipeline 🔗</a></li>
-                <li class="indent"><a href="#processor">Implementing a processor 🏗️</a></li>
+                <li class="indent"><a href="#architecture">RDF-Connect Architecture & Components ⚙️ (11:00h)</a></li>
+                <li class="indent current"><a href="#assembling-pipeline">Assembling a pipeline 🔗 (11:30h)</a></li>
             </ul>
         </li>
     </ul>
@@ -1115,22 +1155,49 @@ npx rdfc pipeline.ttl
     </div>
 </section>
 
-<section id="processor" class="slide index" inlist="" rel="schema:hasPart" resource="#processor">
-    <ul style="margin-top: 2em;">
-        <li class="indent">Introduction to RDF-Connect</li>
-        <li class="indent">
+<section id="lunch-break" class="slide index" inlist="" rel="schema:hasPart" resource="#lunch-break">
+    <h2 property="schema:name" class="big">Lunch break! 🍣</h2>
+</section>
+
+<section id="agenda-3" class="slide" inlist="" rel="schema:hasPart" resource="#agenda-3" style="font-size: medium;">
+    <h2 property="schema:name" class="big" style="margin-top: 20px">Agenda</h2>
+    <ul>
+        <li style="margin-top: -20px;"><strong>Morning Session 1: Introduction</strong></li>
+        <li>
             <ul>
-                <li class="indent"><a href="#what">What will we do in this tutorial? 🤔</a></li>
-                <li class="indent"><a href="#first-pipeline">Assembling our very first pipeline! 🛠️</a></li>
-                <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯</a></li>
-                <li class="indent"><a href="#architecture_rdfc">RDF-Connect Architecture & Components ⚙️</a></li>
+                <li class="indent"><a href="#what">What will happen in this tutorial? 🤔 (9:00h)</a></li>
+                <li class="indent"><a href="#first-pipeline">Let's get our hands dirty already! 🛠️ (9:10h)</a></li>
+                <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯 (10:00h)</a></li>
             </ul>
         </li>
-        <li class="indent" style="margin-top: 2em;"><strong>Hands-on</strong></li>
-        <li class="indent">
+        <li style="margin-top: 10px;"><strong>Coffee break ☕</strong></li> 
+        <li style="margin-top: 10px;"><strong>Morning Session 2: Architecture</strong></li>
+        <li>
             <ul>
-                <li class="indent"><a href="#pipeline">Assembling a pipeline 🔗</a></li>
-                <li class="indent current"><a href="#processor">Implementing a processor 🏗️</a></li>
+                <li class="indent"><a href="#architecture">RDF-Connect Architecture & Components ⚙️ (11:00h)</a></li>
+                <li class="indent"><a href="#assembling-pipeline">Assembling a pipeline 🔗 (11:30h)</a></li>
+            </ul>
+        </li>
+        <li style="margin-top: 10px;"><strong>Lunch break 🍣</strong></li>
+        <li><strong>Afternoon Session 1: Roadmap</strong></li>
+        <li>
+            <ul>
+                <li class="indent current"><a href="#custom-processor">Implementing a custom processor 🏗️ (13:30)</a></li>
+                <li class="indent"><a href="#roadmap">What is next for RDF-Connect? 🛫 (14:30h)</a></li>
+            </ul>
+        </li>
+        <li style="margin-top: 10px;"><strong>Coffee break ☕</strong></li>
+        <li><strong>Afternoon Session 2: Hackathon 🧑‍💻</strong></li>
+    </ul>
+</section>
+
+<section id="custom-processor" class="slide index" inlist="" rel="schema:hasPart" resource="#custom-processor">
+    <ul style="margin-top: 2em;">
+        <li><strong>Afternoon Session 1: Roadmap</strong></li>
+        <li>
+            <ul>
+                <li class="indent current"><a href="#custom-processor">Implementing a custom processor 🏗️ (13:30)</a></li>
+                <li class="indent"><a href="#roadmap">What is next for RDF-Connect? 🛫 (14:30h)</a></li>
             </ul>
         </li>
     </ul>
@@ -1141,7 +1208,7 @@ npx rdfc pipeline.ttl
 
     <ol>
         <li>🌦 HTTP Fetch → Log contents</li>
-        <li>🔄️ Weather API → RDF → Log</li>
+        <li>🔄️ Weather API → RDF → Log</li>hands-on-2
         <li>🧩️ Weather API → RDF → Validation → Log</li>
         <li>🚀️ Weather API → RDF → Validation → Publish → Log</li>
         <li>🤖 <strong>Implement your own ML processor in Python</strong></li>
@@ -1157,7 +1224,7 @@ npx rdfc pipeline.ttl
     <div style="position: absolute; bottom: -10px; right: 10px; text-align: right;">
         <a href="https://github.com/rdf-connect/nara-weather-forecast-kg-pipeline" target="_blank"
            style="border-bottom: none;">
-            <img src="img/qr-tutorial-repo.svg" alt="QR code for tutorial guideline repository" style="width: 200px;"/>
+            <img src="img/qr-tutorial-repo.svg" alt="QR code for tutorial guideline repository" style="width: 150px;"/>
         </a>
     </div>
 </section>
@@ -1440,6 +1507,50 @@ uv add ../processor/dist/rdfc_translation_processor.tar.gz
             </div>
         </a>
     </div>
+</section>
+
+<section id="roadmap" class="slide index" inlist="" rel="schema:hasPart" resource="#roadmap">
+    <ul style="margin-top: 2em;">
+        <li><strong>Afternoon Session 1: Roadmap</strong></li>
+        <li>
+            <ul>
+                <li class="indent"><a href="#custom-processor">Implementing a custom processor 🏗️ (13:30)</a></li>
+                <li class="indent current"><a href="#roadmap">What is next for RDF-Connect? 🛫 (14:30h)</a></li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section id="roadmap-1" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-1">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">What is next for RDF-Connect?</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">TODO:</p>
+    <ul>
+        <li>Alignment with existing initiatives for metadata management e.g., RO-Crates, Galaxy, OpenMetadata, OpenLineage</li>
+        <li>Implementation of execution tracking metadata</li>
+        <li>Add support for other programming languages, e.g, Rust</li>
+        <li>Support for federated and cloud-native execution</li>
+        <li>Alignment with EOSC nodes</li>
+    </ul>
+</section>
+
+<section id="coffee-break-2" class="slide index" inlist="" rel="schema:hasPart" resource="#coffee-break-2">
+    <h2 property="schema:name" class="big">Coffee break! ☕</h2>
+</section>
+
+<section id="hackathon" class="slide index" inlist="" rel="schema:hasPart" resource="#hackathon">
+    <ul style="margin-top: 2em;">
+        <li><strong>Afternoon Session 2: Hackathon 🧑‍💻</strong></li>
+    </ul>
+</section>
+
+<section id="hackathon-1" class="slide" inlist="" rel="schema:hasPart" resource="#hackathon-1">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Let's code something together</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">
+        TODO: maybe check current paper and propose to implement a pipeline from there
+        Or allow participants to propose and implement their own use case.
+    </p>
 </section>
 
 <section id="end" class="slide" inlist="" rel="schema:hasPart" resource="#end">
