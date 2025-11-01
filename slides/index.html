@@ -72,6 +72,43 @@
     </p>
 </section>
 
+<section id="quick-setup" class="slide" inlist="" rel="schema:hasPart" resource="#quick-setup">
+    <h2 property="schema:name" style="font-size: 1.7em; margin-bottom: 0.5rem;">Download dependencies while we're waiting</h2>
+
+    <pre style="margin-bottom: 0.5em;"><code class="language-bash" style="line-height: 1.2em; font-size: 0.75em; margin-top: 0;" data-trim>
+# Clone the tutorial repository
+git clone git@github.com:rdf-connect/nara-weather-forecast-kg-pipeline.git
+cd nara-weather-forecast-kg-pipeline/pipeline/resources
+
+# Start the development container
+docker compose up -d
+
+# Open a shell inside the container
+docker compose exec devbox bash
+
+# Prepare the Python environment for the processor
+cd processor/
+hatch env create
+hatch shell
+    </code></pre>
+
+    <div style="font-size:0.9em; margin-top:0.5em;">
+        ⏳ These commands preload dependencies and images in the background so everything is ready when we start coding.<br>
+        ✅ You’ll end up inside a fully configured <code>devbox</code> environment.
+    </div>
+
+    <!-- absolute image on the right side -->
+    <div style="position: absolute; top: 180px; right: 80px; text-align: right;">
+        <a href="https://github.com/rdf-connect/nara-weather-forecast-kg-pipeline" target="_blank"
+           style="border-bottom: none;">
+            <img src="img/qr-tutorial-repo.svg" alt="QR code for tutorial guideline repository" style="width: 200px;"/>
+            <div style="margin-top: -1em; margin-right: 0;">
+                <span style="font-size: 1em; border-bottom: 2px solid #b8c3d1;">open.gent/r/iswc-rdfc-repo</span>
+            </div>
+        </a>
+    </div>
+</section>
+
 <section id="agenda-1" class="slide" inlist="" rel="schema:hasPart" resource="#agenda-1" style="font-size: medium;">
     <h2 property="schema:name" class="big" style="margin-top: 20px">Agenda</h2>
     <ul>
@@ -83,7 +120,7 @@
                 <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯 (10:00h)</a></li>
             </ul>
         </li>
-        <li style="margin-top: 10px;"><strong>Coffee break ☕</strong></li> 
+        <li style="margin-top: 10px;"><strong>Coffee break ☕</strong></li>
         <li style="margin-top: 10px;"><strong>Morning Session 2: Architecture</strong></li>
         <li>
             <ul>
@@ -148,7 +185,7 @@
         <div style="flex: 1; text-align: left; margin-right: 10px;">
             <h4 style="margin: unset;">Tutorial Website</h4>
             <p style="font-size: 12pt;">
-                The tutorial <a href="https://rdf-connect.github.io/Tutorial-ISWC2025/">website</a> 
+                The tutorial <a href="https://rdf-connect.github.io/Tutorial-ISWC2025/">website</a>
                 has a complete description and motivation for the tutorial. There you may also find
                 all the resources you need to follow along, including these slides.
             </p>
@@ -230,7 +267,7 @@ cd pipeline/  # or `cd ..` to go back to the pipeline directory
 
 # Run a container with an interactive shell
 docker run -it --rm -v $(pwd):/workspace devbox
-# You can now run commands like `npm install` or `npx rdfc pipeline.ttl` 
+# You can now run commands like `npm install` or `npx rdfc pipeline.ttl`
 # inside the container
   </code></pre>
 
@@ -656,7 +693,7 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
         <li><strong>- Workflow Run Crate</strong>: to describe a computation orchestrated by a predefined workflow;</li>
         <li><strong>- Provenance Run Crate</strong>: to describe a workflow computation including the internal details of individual step executions</li>
     </ul>
-    
+
 </section>
 
 <section id="coffee-break-1" class="slide index" inlist="" rel="schema:hasPart" resource="#coffee-break-1">
@@ -674,7 +711,7 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
                 <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯 (10:00h)</a></li>
             </ul>
         </li>
-        <li style="margin-top: 10px;"><strong>Coffee break ☕</strong></li> 
+        <li style="margin-top: 10px;"><strong>Coffee break ☕</strong></li>
         <li style="margin-top: 10px;"><strong>Morning Session 2: Architecture</strong></li>
         <li>
             <ul>
@@ -798,7 +835,7 @@ _:p1 a ex:LogProcessorJS;
     <p style="font-size:1.2em; margin-bottom: 0; margin-top: 1em;"><a href="https://editor.notation3.org/s/miHZcqSQ" target="_blank">check it online</a></p>
     <pre><code class="language-turtle" style="font-size: 0.8em;">
 rdfc:jsImplementationOf rdfs:subPropertyOf rdfs:subClassOf.
-        
+
 ex:LogProcessorJS rdfc:implementationOf rdfc:Processor;
   rdfs:subClassOf rdfc:Processor;
   rdfs:subClassOf prov:Activity.
@@ -1281,7 +1318,7 @@ npx rdfc pipeline.ttl
                 <li class="indent"><a href="#why_rdfc">The what and why of RDF-Connect? 🎯 (10:00h)</a></li>
             </ul>
         </li>
-        <li style="margin-top: 10px;"><strong>Coffee break ☕</strong></li> 
+        <li style="margin-top: 10px;"><strong>Coffee break ☕</strong></li>
         <li style="margin-top: 10px;"><strong>Morning Session 2: Architecture</strong></li>
         <li>
             <ul>
@@ -1664,7 +1701,7 @@ uv add ../processor/dist/rdfc_translation_processor.tar.gz
     <h2 property="schema:name" style="margin-bottom: 0.3em;">Workflows Community Initiative</h2>
 
     <p style="font-size:1.2em; margin-bottom: 0;">TODO: WCI</p>
-    
+
 </section>
 
 <section id="roadmap-4" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-4">
@@ -1713,7 +1750,7 @@ uv add ../processor/dist/rdfc_translation_processor.tar.gz
     <p style="font-size:1.2em; margin-bottom: 0;">Support remote execution of RDF-Connect Runners beyond CLI</p>
     <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
-            TODO: integration with EOSC 
+            TODO: integration with EOSC
         </div>
     </div>
 </section>
