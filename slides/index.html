@@ -1086,7 +1086,7 @@ _:p1 a rdfc:Processor, prov:Activity.
     <div style="position: absolute; bottom: -10px; right: 10px; text-align: right;">
         <a href="https://github.com/rdf-connect/nara-weather-forecast-kg-pipeline" target="_blank"
            style="border-bottom: none;">
-            <img src="img/qr-tutorial-repo.svg" alt="QR code for tutorial guideline repository" style="width: 200px;"/>
+            <img src="img/qr-tutorial-repo.svg" alt="QR code for tutorial guideline repository" style="width: 180px;"/>
         </a>
     </div>
 </section>
@@ -1635,14 +1635,114 @@ uv add ../processor/dist/rdfc_translation_processor.tar.gz
 <section id="roadmap-1" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-1">
     <h2 property="schema:name" style="margin-bottom: 0.3em;">What is next for RDF-Connect?</h2>
 
-    <p style="font-size:1.2em; margin-bottom: 0;">TODO:</p>
-    <ul>
-        <li>Alignment with existing initiatives for metadata management e.g., RO-Crates, Galaxy, OpenMetadata, OpenLineage</li>
-        <li>Implementation of execution tracking metadata</li>
-        <li>Add support for other programming languages, e.g, Rust</li>
-        <li>Support for federated and cloud-native execution</li>
-        <li>Alignment with EOSC nodes</li>
+    <p style="font-size:1.2em; margin-bottom: 0;">We envision the following development and research roads:</p>
+    <ul style="margin-left: 30px; margin-top: 20px;">
+        <li>📜 Alignment with existing initiatives for metadata management</li>
+        <li>🗠 Implementation of execution monitoring</li>
+        <li>🧑‍💻 Add support for other programming languages</li>
+        <li>☁️ Support for federated and cloud-native execution</li>
+        <li>🤖 Automated Processor and Pipeline generation</li>
+        <li>🚀 Zero-copy approaches for data exchange, e.g., Apache Arrow</li>
     </ul>
+</section>
+
+<section id="roadmap-2" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-2">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Community-driven Metadata innitiatives</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">Several innitiatives exist for the standardization of workflow metadata</p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
+            <a href="https://workflows.community/" target="_blank"><img src="img/wci-logo.png" alt="Workflows Community logo" style="max-height: 80px; max-width: 100%; object-fit: contain; background-color: black;"/></a>
+            <a href="https://www.researchobject.org/" target="_blank"><img src="img/ro-crate-wide.svg" alt="RO-Crate logo" style="max-height: 80px; max-width: 100%; object-fit: contain;"/></a>
+            <a href="https://open-metadata.org/" target="_blank"><img src="img/openmetadata-logo.webp" alt="OpenMetadata logo" style="max-height: 80px; max-width: 100%; object-fit: contain;"/></a>
+            <a href="https://openlineage.io/" target="_blank"><img src="img/openlineage.avif" alt="OpenLineage logo" style="max-height: 80px; max-width: 100%; object-fit: contain;"/></a>
+        </div>
+    </div>
+</section>
+
+<section id="roadmap-3" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-3">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Workflows Community Initiative</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">TODO: WCI</p>
+    
+</section>
+
+<section id="roadmap-4" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-4">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">RO-Crates</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">TODO: RO-Crates</p>
+</section>
+
+<section id="roadmap-5" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-5">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">OpenMetadata</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">TODO: OpenMetadata</p>
+</section>
+
+<section id="roadmap-6" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-6">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">OpenLineage</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">TODO: OpenLineage</p>
+</section>
+
+<section id="roadmap-7" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-7">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Live monitoring capabilites</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">Integration of RDF-Connect with systems such as Prometheus</p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
+            TODO: Prometheus
+        </div>
+    </div>
+</section>
+
+<section id="roadmap-8" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-8">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Support for other programming languages</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">RDF-Connect extension to support other languages such as:</p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
+            TODO: Rust, Golang, C++
+        </div>
+    </div>
+</section>
+
+<section id="roadmap-9" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-9">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Support for federated and cloud-native execution</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">Support remote execution of RDF-Connect Runners beyond CLI</p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
+            TODO: integration with EOSC 
+        </div>
+    </div>
+</section>
+
+<section id="roadmap-10" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-10">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Automated Processor and Pipeline generation</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">
+        Leverage generative AI capabilities to automate Processor and Pipeline generation.
+        UI-based pipeline management.
+    </p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
+            TODO: images
+        </div>
+    </div>
+</section>
+
+<section id="roadmap-11" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-11">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Optimization of data flows</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">
+        Zero-copy data movement. Integration with Apache Arrow (where possible) to optimize data flows.
+    </p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
+            TODO: image
+        </div>
+    </div>
 </section>
 
 <section id="coffee-break-2" class="slide index" inlist="" rel="schema:hasPart" resource="#coffee-break-2">
