@@ -259,14 +259,14 @@ hatch shell
     <p style="font-size:1.2em;">Run locally or in a containerized environment:</p>
 
     <pre><code class="language-bash" style="line-height: 1.2em; font-size: 0.75em;" data-trim>
-# Build the Docker image
+# Build and run the Docker image
 cd pipeline/resources
-docker build -t devbox .
+docker compose up -d
 
-cd pipeline/  # or `cd ..` to go back to the pipeline directory
+# Access the devbox container
+docker compose exec devbox bash
+cd pipeline/
 
-# Run a container with an interactive shell
-docker run -it --rm -v $(pwd):/workspace devbox
 # You can now run commands like `npm install` or `npx rdfc pipeline.ttl`
 # inside the container
   </code></pre>
@@ -1806,7 +1806,7 @@ uv add ../processor/dist/rdfc_translation_processor.tar.gz
         </div>
     </div>
 </section>
-    
+
 <section id="roadmap-11" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-11">
     <h2 property="schema:name" style="margin-bottom: 0.3em;">Support for federated and cloud-native execution</h2>
 
@@ -1822,7 +1822,7 @@ uv add ../processor/dist/rdfc_translation_processor.tar.gz
     <h2 property="schema:name" style="margin-bottom: 0.3em;">Automation of workflow development and management</h2>
 
     <p style="font-size:0.8em; line-height: 1.3em; margin-bottom: 10px;">
-        Leverage generative AI capabilities to automate Processor and Pipeline development. 
+        Leverage generative AI capabilities to automate Processor and Pipeline development.
         Also, provideUI-based pipeline management.
     </p>
     <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
