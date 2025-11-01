@@ -768,6 +768,31 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
         <img src="img/generic-architecture.svg" alt="RDF-Connect generic architecture" style="width: 85%;"/>
     </div>
 </section>
+        
+<section id="pipeline-file-structure" class="slide" inlist="" rel="schema:hasPart" resource="#pipeline-file-structure">
+    <h2 property="schema:name">Pipeline File Structure</h2>
+    <div style="display: flex; gap: 2rem; align-items: flex-start;">
+        <div>
+
+            <p style="margin-bottom: 1.5em;">A pipeline is described in RDF configuration files:</p>
+            <ul style="font-size:0.9em; line-height:1.6;">
+                <li style="margin-bottom: 2.5em;">🔗 <strong>Channels</strong><br>
+                    Define how data flows between processors.
+                </li>
+                <li style="margin-bottom: 2.5em;">📦 <strong>Runners</strong><br>
+                    Specify which runtime environments are needed.
+                </li>
+                <li>⚙️ <strong>Processors</strong><br>
+                    Tasks that run inside a runner.
+                </li>
+            </ul>
+
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <img src="img/PipelineFile-light.svg" alt="Pipeline file structure" style="width: 80%;"/>
+        </div>
+    </div>
+</section>
 
 <section id="data-model" class="slide" inlist="" rel="schema:hasPart" resource="#data-model">
     <h2 property="schema:name">RDF-Connect data model overview</h2>
@@ -851,30 +876,6 @@ _:p1 a rdfc:Processor, prov:Activity.
     </div>
 </section>
 
-<section id="pipeline-file-structure" class="slide" inlist="" rel="schema:hasPart" resource="#pipeline-file-structure">
-    <h2 property="schema:name">Pipeline File Structure</h2>
-    <div style="display: flex; gap: 2rem; align-items: flex-start;">
-        <div>
-
-            <p style="margin-bottom: 1.5em;">A pipeline is described in RDF configuration files:</p>
-            <ul style="font-size:0.9em; line-height:1.6;">
-                <li style="margin-bottom: 2.5em;">🔗 <strong>Channels</strong><br>
-                    Define how data flows between processors.
-                </li>
-                <li style="margin-bottom: 2.5em;">📦 <strong>Runners</strong><br>
-                    Specify which runtime environments are needed.
-                </li>
-                <li>⚙️ <strong>Processors</strong><br>
-                    Tasks that run inside a runner.
-                </li>
-            </ul>
-
-        </div>
-        <div style="flex: 1; text-align: center;">
-            <img src="img/PipelineFile-light.svg" alt="Pipeline file structure" style="width: 80%;"/>
-        </div>
-    </div>
-</section>
 
 <section id="shacl-shapes" class="slide" inlist="" rel="schema:hasPart" resource="#shacl-shapes">
     <h2 property="schema:name">Deep Dive: SHACL Shapes</h2>
@@ -954,7 +955,7 @@ _:p1 a rdfc:Processor, prov:Activity.
         </div>
 
         <div style="text-align:center; margin-top:2rem; flex-grow: 4;">
-            <img src="img/startup-flow.svg" style="max-width:80%;" alt="Pipeline 1 Diagram">
+            <img src="img/startup-flow.svg" style="max-width:60%;" alt="Pipeline 1 Diagram">
         </div>
     </div>
 </section>
@@ -970,6 +971,17 @@ _:p1 a rdfc:Processor, prov:Activity.
             Continuous streams for large data that can’t fit in one frame.
         </li>
     </ul>
+
+        <div style="text-align:center; margin-top:4rem; flex-grow: 4;">
+            <img src="img/msg-flow.svg" style="max-width:100%;" alt="Pipeline 1 Diagram">
+        </div>
+</section>
+
+<section id="message-types" class="slide" inlist="" rel="schema:hasPart" resource="#message-types">
+    <h2 property="schema:name">Deep Dive Orchestrator: Message Types</h2>
+        <div style="text-align:center; margin-top:2rem; flex-grow: 4;">
+            <img src="img/stream-msg-flow.svg" style="max-width:80%;" alt="Pipeline 1 Diagram">
+        </div>
 </section>
 
 <section id="runner" class="slide" inlist="" rel="schema:hasPart" resource="#runner">

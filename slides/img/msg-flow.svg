@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?xml-stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" type="text/css"?><svg
-   id="graph-2"
-   width="546.50421"
+   id="graph-15"
+   width="806.45734"
    style="overflow:hidden"
    role="graphics-document document"
    aria-roledescription="sequence"
-   height="699.65735"
+   height="228.63773"
    version="1.1"
-   sodipodi:docname="startup-flow.svg"
+   sodipodi:docname="msg-flow.svg"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview24"
+     id="namedview17"
      pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
@@ -22,15 +22,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.59830752"
-     inkscape:cx="435.39483"
-     inkscape:cy="525.64942"
+     inkscape:zoom="0.78638485"
+     inkscape:cx="463.51351"
+     inkscape:cy="29.883587"
      inkscape:window-width="1916"
      inkscape:window-height="1044"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="graph-2" />
+     inkscape:current-layer="graph-15" />
   <defs
      id="defs1">
     <symbol
@@ -131,14 +131,40 @@
     </marker>
   </defs>
   <g
-     id="viewport-20251101233454504"
+     id="viewport-20251101234436756"
      class="svg-pan-zoom_viewport"
-     transform="matrix(0.77653426,0,0,0.77653426,14.966487,0.38826723)">
+     transform="matrix(0.56593496,0,0,0.56593496,0.28296931,0.28296469)">
     <g
        id="g7">
       <rect
-         x="534"
-         y="835"
+         x="1274"
+         y="338"
+         fill="#eaeaea"
+         stroke="#666"
+         width="150"
+         height="65"
+         name="R2"
+         rx="3"
+         ry="3"
+         class="actor actor-bottom"
+         id="rect7" />
+      <text
+         x="1349"
+         y="370.5"
+         style="font-weight:400;font-size:16px;text-anchor:middle"
+         dominant-baseline="central"
+         alignment-baseline="central"
+         class="actor actor-box"
+         id="text7"><tspan
+           x="1349"
+           dy="0"
+           id="tspan7">Runner2</tspan></text>
+    </g>
+    <g
+       id="g8">
+      <rect
+         x="614"
+         y="338"
          fill="#eaeaea"
          stroke="#666"
          width="150"
@@ -147,61 +173,100 @@
          rx="3"
          ry="3"
          class="actor actor-bottom"
-         id="rect7" />
-      <text
-         x="609"
-         y="867.5"
-         style="font-weight:400;font-size:16px;text-anchor:middle"
-         dominant-baseline="central"
-         alignment-baseline="central"
-         class="actor actor-box"
-         id="text7"><tspan
-           x="609"
-           dy="0"
-           id="tspan7">Orchestrator</tspan></text>
-    </g>
-    <g
-       id="g8">
-      <rect
-         x="0"
-         y="835"
-         fill="#eaeaea"
-         stroke="#666"
-         width="150"
-         height="65"
-         name="R"
-         rx="3"
-         ry="3"
-         class="actor actor-bottom"
          id="rect8" />
       <text
-         x="75"
-         y="867.5"
+         x="689"
+         y="370.5"
          style="font-weight:400;font-size:16px;text-anchor:middle"
          dominant-baseline="central"
          alignment-baseline="central"
          class="actor actor-box"
          id="text8"><tspan
-           x="75"
+           x="689"
            dy="0"
-           id="tspan8">Runner</tspan></text>
+           id="tspan8">Orchestrator</tspan></text>
     </g>
     <g
        id="g9">
+      <rect
+         x="0"
+         y="338"
+         fill="#eaeaea"
+         stroke="#666"
+         width="150"
+         height="65"
+         name="R1"
+         rx="3"
+         ry="3"
+         class="actor actor-bottom"
+         id="rect9" />
+      <text
+         x="75"
+         y="370.5"
+         style="font-weight:400;font-size:16px;text-anchor:middle"
+         dominant-baseline="central"
+         alignment-baseline="central"
+         class="actor actor-box"
+         id="text9"><tspan
+           x="75"
+           dy="0"
+           id="tspan9">Runner1</tspan></text>
+    </g>
+    <g
+       id="g10">
       <line
-         id="actor4"
-         x1="609"
+         id="actor43"
+         x1="1349"
          y1="65"
-         x2="609"
-         y2="835"
+         x2="1349"
+         y2="338"
+         class="actor-line 200"
+         stroke-width="0.5px"
+         stroke="#999"
+         name="R2" />
+      <g
+         id="root-43">
+        <rect
+           x="1274"
+           y="0"
+           fill="#eaeaea"
+           stroke="#666"
+           width="150"
+           height="65"
+           name="R2"
+           rx="3"
+           ry="3"
+           class="actor actor-top"
+           id="rect10" />
+        <text
+           x="1349"
+           y="32.5"
+           style="font-weight:400;font-size:16px;text-anchor:middle"
+           dominant-baseline="central"
+           alignment-baseline="central"
+           class="actor actor-box"
+           id="text10"><tspan
+             x="1349"
+             dy="0"
+             id="tspan10">Runner2</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g11">
+      <line
+         id="actor42"
+         x1="689"
+         y1="65"
+         x2="689"
+         y2="338"
          class="actor-line 200"
          stroke-width="0.5px"
          stroke="#999"
          name="O" />
       <g
-         id="root-4">
+         id="root-42">
         <rect
-           x="534"
+           x="614"
            y="0"
            fill="#eaeaea"
            stroke="#666"
@@ -211,34 +276,34 @@
            rx="3"
            ry="3"
            class="actor actor-top"
-           id="rect9" />
+           id="rect11" />
         <text
-           x="609"
+           x="689"
            y="32.5"
            style="font-weight:400;font-size:16px;text-anchor:middle"
            dominant-baseline="central"
            alignment-baseline="central"
            class="actor actor-box"
-           id="text9"><tspan
-             x="609"
+           id="text11"><tspan
+             x="689"
              dy="0"
-             id="tspan9">Orchestrator</tspan></text>
+             id="tspan11">Orchestrator</tspan></text>
       </g>
     </g>
     <g
-       id="g10">
+       id="g12">
       <line
-         id="actor3"
+         id="actor41"
          x1="75"
          y1="65"
          x2="75"
-         y2="835"
+         y2="338"
          class="actor-line 200"
          stroke-width="0.5px"
          stroke="#999"
-         name="R" />
+         name="R1" />
       <g
-         id="root-3">
+         id="root-41">
         <rect
            x="0"
            y="0"
@@ -246,11 +311,11 @@
            stroke="#666"
            width="150"
            height="65"
-           name="R"
+           name="R1"
            rx="3"
            ry="3"
            class="actor actor-top"
-           id="rect10" />
+           id="rect12" />
         <text
            x="75"
            y="32.5"
@@ -258,29 +323,29 @@
            dominant-baseline="central"
            alignment-baseline="central"
            class="actor actor-box"
-           id="text10"><tspan
+           id="text12"><tspan
              x="75"
              dy="0"
-             id="tspan10">Runner</tspan></text>
+             id="tspan12">Runner1</tspan></text>
       </g>
     </g>
     <style
-       id="style10">#graph-2{font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#graph-2 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#graph-2 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#graph-2 .error-icon{fill:#552222;}#graph-2 .error-text{fill:#552222;stroke:#552222;}#graph-2 .edge-thickness-normal{stroke-width:1px;}#graph-2 .edge-thickness-thick{stroke-width:3.5px;}#graph-2 .edge-pattern-solid{stroke-dasharray:0;}#graph-2 .edge-thickness-invisible{stroke-width:0;fill:none;}#graph-2 .edge-pattern-dashed{stroke-dasharray:3;}#graph-2 .edge-pattern-dotted{stroke-dasharray:2;}#graph-2 .marker{fill:#333333;stroke:#333333;}#graph-2 .marker.cross{stroke:#333333;}#graph-2 svg{font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;font-size:16px;}#graph-2 p{margin:0;}#graph-2 .actor{stroke:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);fill:#ECECFF;}#graph-2 text.actor&gt;tspan{fill:black;stroke:none;}#graph-2 .actor-line{stroke:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);}#graph-2 .innerArc{stroke-width:1.5;stroke-dasharray:none;}#graph-2 .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333;}#graph-2 .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:#333;}#graph-2 #arrowhead path{fill:#333;stroke:#333;}#graph-2 .sequenceNumber{fill:white;}#graph-2 #sequencenumber{fill:#333;}#graph-2 #crosshead path{fill:#333;stroke:#333;}#graph-2 .messageText{fill:#333;stroke:none;}#graph-2 .labelBox{stroke:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);fill:#ECECFF;}#graph-2 .labelText,#graph-2 .labelText&gt;tspan{fill:black;stroke:none;}#graph-2 .loopText,#graph-2 .loopText&gt;tspan{fill:black;stroke:none;}#graph-2 .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);fill:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);}#graph-2 .note{stroke:#aaaa33;fill:#fff5ad;}#graph-2 .noteText,#graph-2 .noteText&gt;tspan{fill:black;stroke:none;}#graph-2 .activation0{fill:#f4f4f4;stroke:#666;}#graph-2 .activation1{fill:#f4f4f4;stroke:#666;}#graph-2 .activation2{fill:#f4f4f4;stroke:#666;}#graph-2 .actorPopupMenu{position:absolute;}#graph-2 .actorPopupMenuPanel{position:absolute;fill:#ECECFF;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);filter:drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));}#graph-2 .actor-man line{stroke:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);fill:#ECECFF;}#graph-2 .actor-man circle,#graph-2 line{stroke:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);fill:#ECECFF;stroke-width:2px;}#graph-2 :root{--mermaid-font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;}</style>
+       id="style12">#graph-15{font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#graph-15 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#graph-15 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#graph-15 .error-icon{fill:#552222;}#graph-15 .error-text{fill:#552222;stroke:#552222;}#graph-15 .edge-thickness-normal{stroke-width:1px;}#graph-15 .edge-thickness-thick{stroke-width:3.5px;}#graph-15 .edge-pattern-solid{stroke-dasharray:0;}#graph-15 .edge-thickness-invisible{stroke-width:0;fill:none;}#graph-15 .edge-pattern-dashed{stroke-dasharray:3;}#graph-15 .edge-pattern-dotted{stroke-dasharray:2;}#graph-15 .marker{fill:#333333;stroke:#333333;}#graph-15 .marker.cross{stroke:#333333;}#graph-15 svg{font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;font-size:16px;}#graph-15 p{margin:0;}#graph-15 .actor{stroke:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);fill:#ECECFF;}#graph-15 text.actor&gt;tspan{fill:black;stroke:none;}#graph-15 .actor-line{stroke:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);}#graph-15 .innerArc{stroke-width:1.5;stroke-dasharray:none;}#graph-15 .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333;}#graph-15 .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:#333;}#graph-15 #arrowhead path{fill:#333;stroke:#333;}#graph-15 .sequenceNumber{fill:white;}#graph-15 #sequencenumber{fill:#333;}#graph-15 #crosshead path{fill:#333;stroke:#333;}#graph-15 .messageText{fill:#333;stroke:none;}#graph-15 .labelBox{stroke:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);fill:#ECECFF;}#graph-15 .labelText,#graph-15 .labelText&gt;tspan{fill:black;stroke:none;}#graph-15 .loopText,#graph-15 .loopText&gt;tspan{fill:black;stroke:none;}#graph-15 .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);fill:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);}#graph-15 .note{stroke:#aaaa33;fill:#fff5ad;}#graph-15 .noteText,#graph-15 .noteText&gt;tspan{fill:black;stroke:none;}#graph-15 .activation0{fill:#f4f4f4;stroke:#666;}#graph-15 .activation1{fill:#f4f4f4;stroke:#666;}#graph-15 .activation2{fill:#f4f4f4;stroke:#666;}#graph-15 .actorPopupMenu{position:absolute;}#graph-15 .actorPopupMenuPanel{position:absolute;fill:#ECECFF;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);filter:drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));}#graph-15 .actor-man line{stroke:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);fill:#ECECFF;}#graph-15 .actor-man circle,#graph-15 line{stroke:hsl(259.6261682243, 59.7765363128%, 87.9019607843%);fill:#ECECFF;stroke-width:2px;}#graph-15 :root{--mermaid-font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;}</style>
     <g
-       id="g11" />
+       id="g13" />
     <g
-       id="g12">
+       id="g14">
       <rect
-         x="50"
+         x="714"
          y="75"
          fill="#EDF2AE"
          stroke="#666"
-         width="584"
+         width="208"
          height="39"
          class="note"
-         id="rect11" />
+         id="rect13" />
       <text
-         x="342"
+         x="818"
          y="80"
          text-anchor="middle"
          dominant-baseline="middle"
@@ -288,132 +353,12 @@
          style="font-weight:400;font-size:16px"
          class="noteText"
          dy="1em"
-         id="text11"><tspan
-           x="342"
-           id="tspan11">Connection Establishment</tspan></text>
-    </g>
-    <g
-       id="g13">
-      <rect
-         x="50"
-         y="172"
-         fill="#EDF2AE"
-         stroke="#666"
-         width="584"
-         height="39"
-         class="note"
-         id="rect12" />
-      <text
-         x="342"
-         y="177"
-         text-anchor="middle"
-         dominant-baseline="middle"
-         alignment-baseline="middle"
-         style="font-weight:400;font-size:16px"
-         class="noteText"
-         dy="1em"
-         id="text12"><tspan
-           x="342"
-           id="tspan12">Identify</tspan></text>
-    </g>
-    <g
-       id="g14">
-      <rect
-         x="50"
-         y="269"
-         fill="#EDF2AE"
-         stroke="#666"
-         width="584"
-         height="39"
-         class="note"
-         id="rect13" />
-      <text
-         x="342"
-         y="274"
-         text-anchor="middle"
-         dominant-baseline="middle"
-         alignment-baseline="middle"
-         style="font-weight:400;font-size:16px"
-         class="noteText"
-         dy="1em"
          id="text13"><tspan
-           x="342"
-           id="tspan13">Pipeline Updates</tspan></text>
-    </g>
-    <g
-       id="g15">
-      <rect
-         x="50"
-         y="448"
-         fill="#EDF2AE"
-         stroke="#666"
-         width="584"
-         height="39"
-         class="note"
-         id="rect14" />
-      <text
-         x="342"
-         y="453"
-         text-anchor="middle"
-         dominant-baseline="middle"
-         alignment-baseline="middle"
-         style="font-weight:400;font-size:16px"
-         class="noteText"
-         dy="1em"
-         id="text14"><tspan
-           x="342"
-           id="tspan14">Processor Configuration</tspan></text>
-    </g>
-    <g
-       id="g16">
-      <rect
-         x="50"
-         y="549"
-         fill="#EDF2AE"
-         stroke="#666"
-         width="584"
-         height="39"
-         class="note"
-         id="rect15" />
-      <text
-         x="342"
-         y="554"
-         text-anchor="middle"
-         dominant-baseline="middle"
-         alignment-baseline="middle"
-         style="font-weight:400;font-size:16px"
-         class="noteText"
-         dy="1em"
-         id="text15"><tspan
-           x="342"
-           id="tspan15">Initialization Confirmation</tspan></text>
-    </g>
-    <g
-       id="g17">
-      <rect
-         x="50"
-         y="646"
-         fill="#EDF2AE"
-         stroke="#666"
-         width="584"
-         height="39"
-         class="note"
-         id="rect16" />
-      <text
-         x="342"
-         y="651"
-         text-anchor="middle"
-         dominant-baseline="middle"
-         alignment-baseline="middle"
-         style="font-weight:400;font-size:16px"
-         class="noteText"
-         dy="1em"
-         id="text16"><tspan
-           x="342"
-           id="tspan16">Processing Start</tspan></text>
+           x="818"
+           id="tspan13">Standard Message Flow</tspan></text>
     </g>
     <text
-       x="341"
+       x="381"
        y="129"
        text-anchor="middle"
        dominant-baseline="middle"
@@ -421,158 +366,80 @@
        style="font-weight:400;font-size:16px"
        class="messageText"
        dy="1em"
-       id="text17">connect() - Initiate bidirectional stream</text>
+       id="text14">FromRunner{SendingMessage(localSequenceNumber, channel, data)}</text>
     <line
        x1="76"
-       y1="162"
-       x2="605"
-       y2="162"
+       y1="166"
+       x2="685"
+       y2="166"
+       class="messageLine0"
+       stroke-width="2"
+       stroke="none"
+       style="fill:none"
+       marker-end="url(#arrowhead)"
+       id="line14" />
+    <text
+       x="1018"
+       y="181"
+       text-anchor="middle"
+       dominant-baseline="middle"
+       alignment-baseline="middle"
+       style="font-weight:400;font-size:16px"
+       class="messageText"
+       dy="1em"
+       id="text15">ToRunner{msg: ReceivingMessage(globalSequenceNumber, channel, data)}</text>
+    <line
+       x1="690"
+       y1="218"
+       x2="1345"
+       y2="218"
+       class="messageLine0"
+       stroke-width="2"
+       stroke="none"
+       style="fill:none"
+       marker-end="url(#arrowhead)"
+       id="line15" />
+    <text
+       x="1021"
+       y="233"
+       text-anchor="middle"
+       dominant-baseline="middle"
+       alignment-baseline="middle"
+       style="font-weight:400;font-size:16px"
+       class="messageText"
+       dy="1em"
+       id="text16">FromRunner{processed: GlobalAck(globalSequenceNumber, channel)}</text>
+    <line
+       x1="1348"
+       y1="270"
+       x2="693"
+       y2="270"
+       class="messageLine0"
+       stroke-width="2"
+       stroke="none"
+       style="fill:none"
+       marker-end="url(#arrowhead)"
+       id="line16" />
+    <text
+       x="384"
+       y="285"
+       text-anchor="middle"
+       dominant-baseline="middle"
+       alignment-baseline="middle"
+       style="font-weight:400;font-size:16px"
+       class="messageText"
+       dy="1em"
+       id="text17">ToRunner{processed: LocalAck(localSequenceNumber, channel)}</text>
+    <line
+       x1="688"
+       y1="318"
+       x2="79"
+       y2="318"
        class="messageLine0"
        stroke-width="2"
        stroke="none"
        style="fill:none"
        marker-end="url(#arrowhead)"
        id="line17" />
-    <text
-       x="341"
-       y="226"
-       text-anchor="middle"
-       dominant-baseline="middle"
-       alignment-baseline="middle"
-       style="font-weight:400;font-size:16px"
-       class="messageText"
-       dy="1em"
-       id="text18">FromRunner{identify: RunnerIdentify(uri)}</text>
-    <line
-       x1="76"
-       y1="259"
-       x2="605"
-       y2="259"
-       class="messageLine0"
-       stroke-width="2"
-       stroke="none"
-       style="fill:none"
-       marker-end="url(#arrowhead)"
-       id="line18" />
-    <text
-       x="344"
-       y="323"
-       text-anchor="middle"
-       dominant-baseline="middle"
-       alignment-baseline="middle"
-       style="font-weight:400;font-size:16px"
-       class="messageText"
-       dy="1em"
-       id="text19">ToRunner{pipeline: &quot;Turtle RDF with SHACL shapes&quot;}</text>
-    <line
-       x1="608"
-       y1="356"
-       x2="79"
-       y2="356"
-       class="messageLine0"
-       stroke-width="2"
-       stroke="none"
-       style="fill:none"
-       marker-end="url(#arrowhead)"
-       id="line19" />
-    <text
-       x="76"
-       y="371"
-       text-anchor="middle"
-       dominant-baseline="middle"
-       alignment-baseline="middle"
-       style="font-weight:400;font-size:16px"
-       class="messageText"
-       dy="1em"
-       id="text20">Update processing pipeline</text>
-    <path
-       d="m 76,408 c 60,-10 60,30 0,20"
-       class="messageLine0"
-       stroke-width="2"
-       stroke="none"
-       style="fill:none"
-       marker-end="url(#arrowhead)"
-       id="path20" />
-    <text
-       x="344"
-       y="502"
-       text-anchor="middle"
-       dominant-baseline="middle"
-       alignment-baseline="middle"
-       style="font-weight:400;font-size:16px"
-       class="messageText"
-       dy="1em"
-       id="text21">ToRunner{proc: Processor(uri, config, arguments)}</text>
-    <line
-       x1="608"
-       y1="539"
-       x2="79"
-       y2="539"
-       class="messageLine0"
-       stroke-width="2"
-       stroke="none"
-       style="fill:none"
-       marker-end="url(#arrowhead)"
-       id="line21" />
-    <text
-       x="341"
-       y="603"
-       text-anchor="middle"
-       dominant-baseline="middle"
-       alignment-baseline="middle"
-       style="font-weight:400;font-size:16px"
-       class="messageText"
-       dy="1em"
-       id="text22">FromRunner{initialized: ProcessorInitialized(uri, [error])}</text>
-    <line
-       x1="76"
-       y1="636"
-       x2="605"
-       y2="636"
-       class="messageLine0"
-       stroke-width="2"
-       stroke="none"
-       style="fill:none"
-       marker-end="url(#arrowhead)"
-       id="line22" />
-    <text
-       x="344"
-       y="700"
-       text-anchor="middle"
-       dominant-baseline="middle"
-       alignment-baseline="middle"
-       style="font-weight:400;font-size:16px"
-       class="messageText"
-       dy="1em"
-       id="text23">ToRunner{start: Empty}</text>
-    <line
-       x1="608"
-       y1="733"
-       x2="79"
-       y2="733"
-       class="messageLine0"
-       stroke-width="2"
-       stroke="none"
-       style="fill:none"
-       marker-end="url(#arrowhead)"
-       id="line23" />
-    <text
-       x="76"
-       y="748"
-       text-anchor="middle"
-       dominant-baseline="middle"
-       alignment-baseline="middle"
-       style="font-weight:400;font-size:16px"
-       class="messageText"
-       dy="1em"
-       id="text24">Ready for processing</text>
-    <path
-       d="m 76,785 c 60,-10 60,30 0,20"
-       class="messageLine0"
-       stroke-width="2"
-       stroke="none"
-       style="fill:none"
-       marker-end="url(#arrowhead)"
-       id="path24" />
   </g>
 </svg>
