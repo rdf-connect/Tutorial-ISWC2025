@@ -189,7 +189,7 @@
         <img src="img/pipeline1.svg" style="max-width:80%;" alt="Pipeline 1 Diagram">
     </div>
     <p style="margin-top: -0.5em; line-height: 1.2em;">
-        We want to <strong>[fetch the <a href="https://www.jma.go.jp/jma/indexe.html">JMA meteorological API</a>]</strong>
+        We want to <strong>[fetch data from the <a href="https://www.jma.go.jp/bosai/forecast/data/overview_forecast/290000.json">JMA meteorological forecast API</a>]</strong>
         and <strong>[log its contents]</strong> to the console.
     </p>
 </section>
@@ -308,9 +308,9 @@ npm install @rdfc/log-processor-ts
 
     <p style="margin-bottom: 0">Define the processor instantiation</p>
     <pre style="padding-top: 0.5em; padding-bottom: 0.5em; margin-bottom: 0.3em; margin-top: -0.3em;"><code
-            class="language-turtle" style="line-height: 1.2em; font-size: 0.75em;" data-trim>
+            class="language-turtle" style="line-height: 1.2em; font-size: 0.65em;" data-trim>
 &lt;fetcher&gt; a rdfc:HttpFetch;
-    rdfc:url "TODO: API URL";
+    rdfc:url "https://www.jma.go.jp/bosai/forecast/data/overview_forecast/290000.json";
     rdfc:writer &lt;json&gt;.
     </code></pre>
 
@@ -421,19 +421,27 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
 <section id="motiv3" class="slide" inlist="" rel="schema:hasPart" resource="#motiv3">
     <h2 property="schema:name">Pipelines are ubiqutous in real world systems</h2>
     <ul>
-        <li>ETL pipelines for data warehousing</li>
-        <li>Data integration pipelines for combining data from multiple sources</li>
-        <li>Machine learning pipelines for training and deploying models</li>
-        <li>Real-time data processing pipelines for streaming data</li>
+        <li>🏭 ETL pipelines for data warehousing</li>
+        <li>🔗 Data integration pipelines for combining data from multiple sources</li>
+        <li>🤖 Machine learning pipelines for training and deploying models</li>
+        <li>☄️ Real-time data processing pipelines for streaming data</li>
     </ul>
     <div style="display: flex; flex-direction: row; justify-content: space-around;">
-        <img src="img/fig-3.png" style="width: 15%;"/>
-        <img src="img/fig-4.jpg" style="width: 40%;"/>
-        <img src="img/fig-5.jpg" style="width: 40%;"/>
+        <img src="img/fig-5.jpg" style="width: 50%; margin-top: 1em;"/>
     </div>
 </section>
 
 <section id="motiv4" class="slide" inlist="" rel="schema:hasPart" resource="#motiv4">
+    <h2 property="schema:name">Our main motivation use case</h2>
+    <p>
+        We faced again and again the challenges of handling the lifecycle of Knowledge Graphs in multiple domains.
+    </p>
+    <div style="display: flex; flex-direction: row; justify-content: space-around;">
+        <img src="img/motivation.svg" style="width: 60%; margin-top: 1em;"/>
+    </div>
+</section>
+
+<section id="motiv5" class="slide" inlist="" rel="schema:hasPart" resource="#motiv5">
     <h2 property="schema:name">Stream processing computational paradigm for continuous and dynamic data systems</h2>
     <div style="display: flex; flex-direction: column; justify-content: space-around;">
         <blockquote
@@ -456,7 +464,7 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
     </div>
 </section>
 
-<section id="motiv5" class="slide" inlist="" rel="schema:hasPart" resource="#motiv5">
+<section id="motiv6" class="slide" inlist="" rel="schema:hasPart" resource="#motiv6">
     <h2 property="schema:name">Cross-environment execution: choosing the best of all worlds</h2>
     <p style="font-size: 14pt;">
         The ability to execute applications written in different programming languages in an integrated manner
@@ -480,7 +488,7 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
     </div>
 </section>
 
-<section id="motiv6" class="slide" inlist="" rel="schema:hasPart" resource="#motiv6">
+<section id="motiv7" class="slide" inlist="" rel="schema:hasPart" resource="#motiv7">
     <h2 property="schema:name">Declarative, reusable and provenance-aware data processing</h2>
     <div style="display: flex; flex-direction: column; justify-content: space-around;">
         <blockquote
@@ -503,7 +511,7 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
         </blockquote>
         <blockquote
                 style="font-size: 12pt; font-style: italic; margin: 10px; border-left: 4px solid #ccc; padding-left: 10px;">
-            Prospective provenance—the execution plan—is essentially the workflow itself: it includes a machine-readable
+            <strong>Prospective provenance</strong>—the execution plan—is essentially the workflow itself: it includes a machine-readable
             specification with the processing steps to be performed and the data and software dependencies to carry out
             each computation.
             <cite style="display: block; margin-top: 10px; font-size: 12pt; text-align: right;">
@@ -514,21 +522,21 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
     </div>
 </section>
 
-<section id="motiv7" class="slide" inlist="" rel="schema:hasPart" resource="#motiv7">
+<section id="motiv8" class="slide" inlist="" rel="schema:hasPart" resource="#motiv8">
     <h2 property="schema:name">RDF-Connect requirements overview</h2>
     <div style="text-align: center">
         <img src="img/fig-8.svg" alt="RDF-Connect requirements overview" style="width: 95%;"/>
     </div>
 </section>
 
-<section id="motiv8" class="slide" inlist="" rel="schema:hasPart" resource="#motiv8">
+<section id="motiv9" class="slide" inlist="" rel="schema:hasPart" resource="#motiv9">
     <h2 property="schema:name">Aren't there like a million pipeline frameworks already?</h2>
     <div style="text-align: center">
         <img src="img/fig-9.svg" alt="Related work" style="width: 95%;"/>
     </div>
 </section>
 
-<section id="motiv9" class="slide" inlist="" rel="schema:hasPart" resource="#motiv9">
+<section id="motiv10" class="slide" inlist="" rel="schema:hasPart" resource="#motiv10">
     <h2 property="schema:name">Aren't there like a million pipeline frameworks already?</h2>
     <div style="display: flex; flex-direction: row; justify-content: space-around; gap: 20px; margin-top: 20px;">
         <iframe src="https://workflows.community/systems" style="width: 90%; height: 400px; border: 1px solid #ccc;"
@@ -536,7 +544,7 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
     </div>
 </section>
 
-<section id="motiv10" class="slide" inlist="" rel="schema:hasPart" resource="#motiv10">
+<section id="motiv11" class="slide" inlist="" rel="schema:hasPart" resource="#motiv11">
     <h2 property="schema:name">Aren't there like a million pipeline frameworks already?</h2>
     <div style="text-align: center">
         <img src="img/fig-10.svg" alt="Existing pipeline frameworks" style="width: 100%;"/>
@@ -549,7 +557,30 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
     </div>
 </section>
 
-<section id="motiv11" class="slide" inlist="" rel="schema:hasPart" resource="#motiv11">
+<section id="motiv12" class="slide" inlist="" rel="schema:hasPart" resource="#motiv12">
+    <h2 property="schema:name">Enter RDF-Connect</h2>
+    <div style="display: flex; flex-direction: row; justify-content: space-around; gap: 20px; margin-top: 20px;">
+        <iframe src="https://rdf-connect.github.io/" style="width: 90%; height: 650px; border: 1px solid #ccc; zoom: 70%"
+                title="Example 1"></iframe>
+    </div>
+</section>
+
+<section id="motiv13" class="slide" inlist="" rel="schema:hasPart" resource="#motiv13">
+    <h2 property="schema:name">RDF-Connect — Key features</h2>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+        <ul style="font-size: 0.8em; line-height: 1.4; max-width: 80%; margin: 0 auto; text-align: left;">
+            <li>⚡️ <strong>Streaming-first:</strong> event-based design supporting both batch and streaming workloads.</li>
+            <li>🌐 <strong>Polyglot execution:</strong> run workflows transparently across JavaScript, Python, JVM and more.</li>
+            <li>📜 <strong>Declarative pipelines:</strong> pipelines are described in RDF based on a lightweight vocabulary.</li>
+            <li>✨ <strong>SHACL-driven contracts:</strong> each runner/processor ships a SHACL shape for constraint validation.</li>
+            <li>🧭 <strong>Provenance-aware:</strong> prospective and retrospective (PROV-O) provenance are first-class.</li>
+            <li>♻️ <strong>Reusable processors:</strong> native add-in libraries for easy extension and cross-language reuse.</li>
+            <li>📡 <strong>Uniform communication:</strong> protocol-based communication for interoperable data flows.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="motiv14" class="slide" inlist="" rel="schema:hasPart" resource="#motiv14">
     <h2 property="schema:name">A worthy mention:<br/>Common Workflow Language</h2>
     <div style="display: flex; flex-direction: row; justify-content: space-around; gap: 20px; margin-top: 20px;">
         <img src="img/fig-11.svg" alt="Common Workflow Language Logo" style="width: 20%;"/>
@@ -563,7 +594,7 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
     </div>
 </section>
 
-<section id="motiv12" class="slide" inlist="" rel="schema:hasPart" resource="#motiv12">
+<section id="motiv15" class="slide" inlist="" rel="schema:hasPart" resource="#motiv15">
     <h2 property="schema:name">How is RDF-Connect different from CWL?</h2>
     <table style="width: 100%; margin-left: 0; border-collapse: collapse; margin-top: 10px; font-size: 12pt; text-align: left;">
         <thead>
@@ -575,8 +606,8 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
         </thead>
         <tbody>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 10px;">Streaming</td>
-            <td style="border: 1px solid #ccc; padding: 10px;">Supports both batch and streaming via gRPC streams</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">Streaming support</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">Event-based design that supports both batch and streaming paradigms</td>
             <td style="border: 1px solid #ccc; padding: 10px;">Primarily batch-oriented, although
                 implementation-dependent streaming can be supported (e.g,. using named pipes)
             </td>
@@ -592,10 +623,10 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
         </tr>
         <tr>
             <td style="border: 1px solid #ccc; padding: 10px;">Provenance</td>
-            <td style="border: 1px solid #ccc; padding: 10px;">Built-in prospective and retrospective provenance
+            <td style="border: 1px solid #ccc; padding: 10px;">Built-in semantic prospective and retrospective provenance
                 tracking based on PROV-O
             </td>
-            <td style="border: 1px solid #ccc; padding: 10px;">Provenance extension available (<a
+            <td style="border: 1px solid #ccc; padding: 10px;">Retrospective provenance extension available (<a
                     href="https://github.com/common-workflow-language/cwlprov" target="_blank">CWLProv</a>) based on
                 PROV-O
             </td>
@@ -608,6 +639,24 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
         </tr>
         </tbody>
     </table>
+</section>
+
+<section id="motiv16" class="slide" inlist="" rel="schema:hasPart" resource="#motiv16">
+    <h2 property="schema:name">Another worthy mention:<br/>Workflow Run RO-Crate profiles</h2>
+    <div style="text-align: center">
+        <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0309210">
+            <img src="img/rocrates.png" alt="RO-Crates workflows" style="width: 95%;"/>
+        </a>
+    </div>
+    <p style="font-size: 14pt; flex: 1; text-align: left; margin-top: 15px;">
+        Workflow Run RO-Crate profiles provide a semantic way to describe workflows including:
+    </p>
+    <ul style="font-size: 12pt; flex: 1; text-align: left; margin-top: 15px; margin-left: 30px;">
+        <li><strong>- Process Run Crate</strong>: to describe the execution of one or more tools that contribute to a computation;</li>
+        <li><strong>- Workflow Run Crate</strong>: to describe a computation orchestrated by a predefined workflow;</li>
+        <li><strong>- Provenance Run Crate</strong>: to describe a workflow computation including the internal details of individual step executions</li>
+    </ul>
+    
 </section>
 
 <section id="coffee-break-1" class="slide index" inlist="" rel="schema:hasPart" resource="#coffee-break-1">
@@ -662,8 +711,8 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
     <h2 property="schema:name">Running example: the goal</h2>
     <ol>
         <li>Retrieve JSON data from <b><a target="_blank"
-                                          href="https://dataset.api.hub.geosphere.at/v1/station/current/tawes-v1-10min?parameters=TL,RR&station_ids=11035">GeoSphere
-            weather
+                                          href="https://www.jma.go.jp/bosai/forecast/data/overview_forecast/290000.json">JMA
+            weather forecast
             API</a></b></li>
         <li>Data is transformed into RDF using <b><a href="https://rml.io" target="_blank">RML</a></b></li>
         <li><b>Translate</b> language-typed literals to another language</li>
@@ -677,23 +726,85 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
 </section>
 
 <section id="architecture" class="slide" inlist="" rel="schema:hasPart" resource="#architecture">
-    <h2 property="schema:name">High level architecture overview</h2>
-    <p>
-        TODO: Diagram with generic architecture overview. I imagine a simple layered architecture having:
-    </p>
-    <ul>
-        <li>- an orchestration layer at the top</li>
-        <li>- a runners layer highlighting the different environments (e.g., Node.js, browser, Python, etc.)</li>
-        <li>- a processors layer with the processors belonging to the different environments</li>
-        <li>- a vertical channel layer across all other layers, since channels are used by all other components</li>
-    </ul>
+    <h2 property="schema:name">High-level architecture overview</h2>
+    <div style="text-align: center">
+        <img src="img/generic-architecture.svg" alt="RDF-Connect generic architecture" style="width: 85%;"/>
+    </div>
 </section>
 
 <section id="data-model" class="slide" inlist="" rel="schema:hasPart" resource="#data-model">
     <h2 property="schema:name">RDF-Connect data model overview</h2>
-    <p>
-        TODO: Diagram with RDFC ontology showing main concepts and relations (similar to the one in the ISWC paper)
-    </p>
+    <div style="text-align: center">
+        <img src="img/ontology.svg" alt="RDF-Connect data model" style="width: 85%;"/>
+    </div>
+</section>
+
+<section id="logical-inference1" class="slide" inlist="" rel="schema:hasPart" resource="#logical-inference1">
+    <h2 property="schema:name">RDF-Connect logical inference over a processor</h2>
+    <p style="font-size:1.2em; margin-bottom: 0">General definitions in the RDFC ontology:</p>
+    <div style="display: flex; flex-direction: row; justify-content: space-around; gap: 20px; margin-top: 20px;">
+        <div style="flex: 1; text-align: center;">
+            <pre><code class="language-turtle" style="font-size: 0.6em;">
+# Processor class definition
+rdfc:Processor a rdfs:Class;
+    rdfs:subClassOf prov:Activity.
+
+rdfc:implementationOf a rdf:Property;
+    rdfs:subPropertyOf rdfs:subClassOf.
+
+# Property for JavaScript processors
+rdfc:jsImplementationOf a rdf:Property;
+    rdfs:subPropertyOf rdfc:implementationOf.
+    </code></pre>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <pre><code class="language-turtle" style="font-size: 0.6em;">
+# JavaScript Runner definition
+&lt;myJSRunner&gt; a rdfc:Runner;
+    rdfc:handlesSubjectsOf rdfc:jsImplementationOf;
+    rdfc:command "npx js-runner".
+    </code></pre>
+        </div>
+    </div>
+</section>
+
+<section id="logical-inference1" class="slide" inlist="" rel="schema:hasPart" resource="#logical-inference1">
+    <h2 property="schema:name">RDF-Connect logical inference over a processor</h2>
+    <p style="font-size:1.2em; margin-bottom: 0">Concrete processor definition:</p>
+    <div style="display: flex; flex-direction: row; justify-content: space-around; gap: 20px; margin-top: 20px;">
+        <div style="flex: 1; text-align: center;">
+            <pre><code class="language-turtle" style="font-size: 0.6em;">
+# Language-specific processor definition
+ex:LogProcessorJS rdfc:jsImplementationOf rdfc:Processor.
+  rdfs:label "Simple Log Processor for JavaScript";
+  rdfs:comment "Logs incoming messages";
+  rdfc:entrypoint &lt;./&gt;;
+  rdfc:file &lt;./lib/util_processors.js&gt;;
+  rdfc:class "LogProcessor".
+    </code></pre>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <pre><code class="language-turtle" style="font-size: 0.6em;">
+# Processor instantiation in pipeline
+_:p1 a ex:LogProcessorJS;
+  ...
+    </code></pre>
+        </div>
+    </div>
+</section>
+
+<section id="logical-inference3" class="slide" inlist="" rel="schema:hasPart" resource="#logical-inference3">
+    <h2 property="schema:name">Following the simple entailment relations, we obtain that:</h2>
+    <p style="font-size:1.2em; margin-bottom: 0; margin-top: 1em;"><a href="https://editor.notation3.org/s/miHZcqSQ" target="_blank">check it online</a></p>
+    <pre><code class="language-turtle" style="font-size: 0.8em;">
+rdfc:jsImplementationOf rdfs:subPropertyOf rdfs:subClassOf.
+        
+ex:LogProcessorJS rdfc:implementationOf rdfc:Processor;
+  rdfs:subClassOf rdfc:Processor;
+  rdfs:subClassOf prov:Activity.
+
+_:p1 a rdfc:Processor, prov:Activity.
+    </code></pre>
 </section>
 
 <section id="pipeline-design" class="slide" inlist="" rel="schema:hasPart" resource="#pipeline-design">
@@ -975,7 +1086,7 @@ LOG_LEVEL=debug npx rdfc pipeline.ttl
     <div style="position: absolute; bottom: -10px; right: 10px; text-align: right;">
         <a href="https://github.com/rdf-connect/nara-weather-forecast-kg-pipeline" target="_blank"
            style="border-bottom: none;">
-            <img src="img/qr-tutorial-repo.svg" alt="QR code for tutorial guideline repository" style="width: 200px;"/>
+            <img src="img/qr-tutorial-repo.svg" alt="QR code for tutorial guideline repository" style="width: 180px;"/>
         </a>
     </div>
 </section>
@@ -1524,14 +1635,114 @@ uv add ../processor/dist/rdfc_translation_processor.tar.gz
 <section id="roadmap-1" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-1">
     <h2 property="schema:name" style="margin-bottom: 0.3em;">What is next for RDF-Connect?</h2>
 
-    <p style="font-size:1.2em; margin-bottom: 0;">TODO:</p>
-    <ul>
-        <li>Alignment with existing initiatives for metadata management e.g., RO-Crates, Galaxy, OpenMetadata, OpenLineage</li>
-        <li>Implementation of execution tracking metadata</li>
-        <li>Add support for other programming languages, e.g, Rust</li>
-        <li>Support for federated and cloud-native execution</li>
-        <li>Alignment with EOSC nodes</li>
+    <p style="font-size:1.2em; margin-bottom: 0;">We envision the following development and research roads:</p>
+    <ul style="margin-left: 30px; margin-top: 20px;">
+        <li>📜 Alignment with existing initiatives for metadata management</li>
+        <li>🗠 Implementation of execution monitoring</li>
+        <li>🧑‍💻 Add support for other programming languages</li>
+        <li>☁️ Support for federated and cloud-native execution</li>
+        <li>🤖 Automated Processor and Pipeline generation</li>
+        <li>🚀 Zero-copy approaches for data exchange, e.g., Apache Arrow</li>
     </ul>
+</section>
+
+<section id="roadmap-2" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-2">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Community-driven Metadata innitiatives</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">Several innitiatives exist for the standardization of workflow metadata</p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
+            <a href="https://workflows.community/" target="_blank"><img src="img/wci-logo.png" alt="Workflows Community logo" style="max-height: 80px; max-width: 100%; object-fit: contain; background-color: black;"/></a>
+            <a href="https://www.researchobject.org/" target="_blank"><img src="img/ro-crate-wide.svg" alt="RO-Crate logo" style="max-height: 80px; max-width: 100%; object-fit: contain;"/></a>
+            <a href="https://open-metadata.org/" target="_blank"><img src="img/openmetadata-logo.webp" alt="OpenMetadata logo" style="max-height: 80px; max-width: 100%; object-fit: contain;"/></a>
+            <a href="https://openlineage.io/" target="_blank"><img src="img/openlineage.avif" alt="OpenLineage logo" style="max-height: 80px; max-width: 100%; object-fit: contain;"/></a>
+        </div>
+    </div>
+</section>
+
+<section id="roadmap-3" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-3">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Workflows Community Initiative</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">TODO: WCI</p>
+    
+</section>
+
+<section id="roadmap-4" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-4">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">RO-Crates</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">TODO: RO-Crates</p>
+</section>
+
+<section id="roadmap-5" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-5">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">OpenMetadata</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">TODO: OpenMetadata</p>
+</section>
+
+<section id="roadmap-6" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-6">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">OpenLineage</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">TODO: OpenLineage</p>
+</section>
+
+<section id="roadmap-7" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-7">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Live monitoring capabilites</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">Integration of RDF-Connect with systems such as Prometheus</p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
+            TODO: Prometheus
+        </div>
+    </div>
+</section>
+
+<section id="roadmap-8" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-8">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Support for other programming languages</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">RDF-Connect extension to support other languages such as:</p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
+            TODO: Rust, Golang, C++
+        </div>
+    </div>
+</section>
+
+<section id="roadmap-9" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-9">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Support for federated and cloud-native execution</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">Support remote execution of RDF-Connect Runners beyond CLI</p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
+            TODO: integration with EOSC 
+        </div>
+    </div>
+</section>
+
+<section id="roadmap-10" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-10">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Automated Processor and Pipeline generation</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">
+        Leverage generative AI capabilities to automate Processor and Pipeline generation.
+        UI-based pipeline management.
+    </p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
+            TODO: images
+        </div>
+    </div>
+</section>
+
+<section id="roadmap-11" class="slide" inlist="" rel="schema:hasPart" resource="#roadmap-11">
+    <h2 property="schema:name" style="margin-bottom: 0.3em;">Optimization of data flows</h2>
+
+    <p style="font-size:1.2em; margin-bottom: 0;">
+        Zero-copy data movement. Integration with Apache Arrow (where possible) to optimize data flows.
+    </p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 1em;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; align-items: center; justify-items: center;">
+            TODO: image
+        </div>
+    </div>
 </section>
 
 <section id="coffee-break-2" class="slide index" inlist="" rel="schema:hasPart" resource="#coffee-break-2">

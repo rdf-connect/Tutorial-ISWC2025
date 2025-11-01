@@ -8,3 +8,4 @@ output
 *.diff
 bundled
 node_modules
+*.drawio.bkp
