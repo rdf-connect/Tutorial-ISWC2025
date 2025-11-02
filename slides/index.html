@@ -357,7 +357,7 @@ npm install @rdfc/log-processor-ts
 <> a rdfc:Pipeline;
    rdfc:consistsOf [
        rdfc:instantiates rdfc:NodeRunner;
-       rdfc:consistsOf &lt;fetcher&gt; ].
+       rdfc:processor &lt;fetcher&gt; ].
     </code></pre>
 </section>
 
@@ -383,7 +383,7 @@ npm install @rdfc/log-processor-ts
     <pre style="padding-top: 0.5em; padding-bottom: 0.5em; margin-bottom: 0.3em; margin-top: -0.3em;"><code
             class="language-turtle" style="line-height: 1.2em; font-size: 0.75em;" data-trim>
 [ rdfc:instantiates rdfc:NodeRunner;
-  rdfc:consistsOf &lt;fetcher&gt;, &lt;logger&gt; ].
+  rdfc:processor &lt;fetcher&gt;, &lt;logger&gt; ].
     </code></pre>
 </section>
 
@@ -983,7 +983,7 @@ _:p1 a rdfc:Processor, prov:Activity.
     <ol>
         <li>Send the message </li>
         <li>Process the message </li>
-        <li>Awknoledge message processed</li>
+        <li>Acknowledge message processed</li>
     </ol>
     <div style="text-align:center; margin-top:4rem; flex-grow: 4;">
         <img src="img/msg-flow.svg" style="max-width:80%;" alt="Pipeline 1 Diagram">
@@ -1902,7 +1902,7 @@ uv add ../processor/dist/rdfc_translation_processor.tar.gz
   <h2 property="schema:name" style="margin-bottom: 0.3em;">What Could Our Pipeline Do?</h2>
 
   <p style="font-size:1.2em; line-height: 1.8em; margin-bottom: 0;">
-    We already have plenty of ideas for individual processors — but what about the bigger picture?  
+    We already have plenty of ideas for individual processors — but what about the bigger picture?
     What could a <strong>complete pipeline</strong> actually achieve?
   </p>
   <p style="font-size:1.1em; line-height: 1.8em;">
@@ -1925,7 +1925,7 @@ uv add ../processor/dist/rdfc_translation_processor.tar.gz
     👉 Don’t worry about perfection — the goal is to explore, experiment, and have fun connecting ideas.
   </p>
     <p>
-        Please create a GitHub repository for your processor and let us link them together in a pipelin.
+        Please create a GitHub repository for your processor and let us link them together in a pipeline.
     </p>
 </section>
 
