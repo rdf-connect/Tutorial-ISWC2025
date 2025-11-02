@@ -1,0 +1,11 @@
+@prefix rdfc: <https://w3id.org/rdf-connect#>.
+
+<channel> a rdfc:Reader, rdfc:Writer;
+    rdfc:logLevel "info".
+
+<a> a rdfc:GenerateMessage;
+  rdfc:writer <channel>.
+
+<b> a rdfc:ConsumerMessage;
+  rdfc:Reader <channel>.
+
