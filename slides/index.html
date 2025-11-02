@@ -1541,8 +1541,8 @@ npx rdfc pipeline.ttl
     <ol>
         <li>In the <code>transform</code> method: consume the reader channel</li>
         <li>Parse the input using <a href="https://pypi.org/project/rdflib/" target="_blank">rdflib</a></li>
-        <li>Identify language-tagged literals with <em>@de</em></li>
-        <li>Translate them to English using a <a href="https://huggingface.co/Helsinki-NLP/opus-mt-de-en"
+        <li>Identify language-tagged literals with <em>@ja</em></li>
+        <li>Translate them to English using a <a href="https://huggingface.co/Helsinki-NLP/opus-mt-ja-en"
                                                  target="_blank">ML model</a></li>
         <li>Emit both original and translated triples to the writer channel</li>
         <li>Define the processor in <em>processor.ttl</em></li>
