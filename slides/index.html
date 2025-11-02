@@ -978,14 +978,19 @@ _:p1 a rdfc:Processor, prov:Activity.
                                     data-src="code/channel-log.ttl"></code></pre>
 </section>
 
-<section id="message-types" class="slide" inlist="" rel="schema:hasPart" resource="#message-types">
+<section id="message-types-single" class="slide" inlist="" rel="schema:hasPart" resource="#message-types-single">
     <h2 property="schema:name">Message Types: Single Message</h2>
-        <div style="text-align:center; margin-top:2rem; flex-grow: 4;">
-            <img src="img/stream-msg-flow.svg" style="max-width:80%;" alt="Pipeline 1 Diagram">
-        </div>
+    <ol>
+        <li>Send the message </li>
+        <li>Process the message </li>
+        <li>Awknoledge message processed</li>
+    </ol>
+    <div style="text-align:center; margin-top:4rem; flex-grow: 4;">
+        <img src="img/msg-flow.svg" style="max-width:80%;" alt="Pipeline 1 Diagram">
+    </div>
 </section>
 
-<section id="message-types" class="slide" inlist="" rel="schema:hasPart" resource="#message-types">
+<section id="message-types-stream" class="slide" inlist="" rel="schema:hasPart" resource="#message-types-stream">
     <h2 property="schema:name">Message Types: Streaming Message</h2>
         <div style="text-align:center; margin-top:2rem; flex-grow: 4;">
             <img src="img/stream-msg-flow.svg" style="max-width:80%;" alt="Pipeline 1 Diagram">
