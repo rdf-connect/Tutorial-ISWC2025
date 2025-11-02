@@ -971,14 +971,22 @@ _:p1 a rdfc:Processor, prov:Activity.
             Continuous streams for large data that can’t fit in one frame.
         </li>
     </ul>
+    <strong>Design decision: channels connect processors 1 to 1.</strong>
 
-        <div style="text-align:center; margin-top:4rem; flex-grow: 4;">
-            <img src="img/msg-flow.svg" style="max-width:100%;" alt="Pipeline 1 Diagram">
+    <pre><code style="font-size:0.65em; line-height:1.6; flex-grow: 1" id="shacl-example-jsonld"
+                                    class="language-turtle"
+                                    data-src="code/channel-log.ttl"></code></pre>
+</section>
+
+<section id="message-types" class="slide" inlist="" rel="schema:hasPart" resource="#message-types">
+    <h2 property="schema:name">Message Types: Single Message</h2>
+        <div style="text-align:center; margin-top:2rem; flex-grow: 4;">
+            <img src="img/stream-msg-flow.svg" style="max-width:80%;" alt="Pipeline 1 Diagram">
         </div>
 </section>
 
 <section id="message-types" class="slide" inlist="" rel="schema:hasPart" resource="#message-types">
-    <h2 property="schema:name">Deep Dive Orchestrator: Message Types</h2>
+    <h2 property="schema:name">Message Types: Streaming Message</h2>
         <div style="text-align:center; margin-top:2rem; flex-grow: 4;">
             <img src="img/stream-msg-flow.svg" style="max-width:80%;" alt="Pipeline 1 Diagram">
         </div>
